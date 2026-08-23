@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ❣️ Checkout
+        uses: actions/checkout@master
+
+      - name: 🎨 Install Tailwind
+        uses: tailwindcss/autoprefixer-action@v1
+        with:
+          extraPlugins: 'container-queries'
+
+      - name: 📤 Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public/
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
