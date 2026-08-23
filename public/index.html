@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -90,7 +90,7 @@
       <h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase w-[90%] reveal">
         WE DON'T JUST MAKE COFFEE.<br/>WE MAKE MOMENTS.
       </h2>
-      <div class="w-16 h-2 bg-primary mt-8 transform -skew-x-12 reveal--line"></div>
+      <div class="w-16 h-2 bg-primary mt-8 transform -skew-x-12 reveal" style="transition-delay: 120ms"></div>
     </section>
 
     <!-- MANIFESTO (Desktop) -->
@@ -107,6 +107,43 @@
         <div class="w-px h-32 bg-primary mx-auto mt-16 rotate-45 reveal--line" style="transition-delay: 220ms"></div>
       </div>
     </section>
+    <!-- VISIT US / Location -->
+    <section class="px-margin-mobile mb-section-gap w-full reveal">
+      <div class="max-w-2xl mx-auto bg-background border-t border-on-background/10 border-b border-on-background/10 py-12" id="locations">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+          <div class="w-full md:w-1/3 text-center md:text-left">
+            <h2 class="font-display-lg text-headline-lg-mobile text-background uppercase mb-4">Five/Cafe</h2>
+            <p class="font-mono-label text-mono-label text-secondary mb-2">Coffee Shop</p>
+            <address class="font-body-md text-body-md text-surface-lowest mb-6 line-break-normal">
+              29J4+FFJ, Gehan Al Sadat,<br/>
+              Mit Badr Khamees, El Mansoura 1,<br/>
+              Dakahlia Governorate 7650101
+            </address>
+          </div>
+          <div class="w-full md:w-2/3 bg-surface-container-lowest rounded-lg p-8 md:p-10">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="font-xl text-primary">🕐</span>
+              <div>
+                <p class="font-semibold text-on-background">Opening Hours</p>
+                <p class="font-mono-label text-mono-label text-on-background/60">Open · Closes 2 AM</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="font-xl text-primary">💰</span>
+              <div>
+                <p class="font-semibold text-on-background">Price Range</p>
+                <p class="font-mono-label text-mono-label text-on-background/60">E£1–200 per person</p>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=29J4%2BFFJ%2C%20Gehan%20Al%20Sadat%2C%20Mit%20Badr%20Khamees%2C%20El%20Mansoura%2C%20Dakahlia%20Governorate%207650101" class="w-full bg-primary text-background font-mono-label text-mono-label py-3 px-6 rounded hover:bg-on-background transition-colors duration-300 text-center uppercase btn-interactive" target="_blank" rel="noopener noreferrer">
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /VISIT US / Location -->
+
 
 
     <!-- SIGNATURES horizontal scroll (Mobile) -->
@@ -210,30 +247,9 @@
       </div>
     </section>
 
-    <!-- BRANCH SELECTOR toggle (Mobile) -->
-    <section id="locations" class="px-margin-mobile mb-section-gap w-full flex flex-col items-center scroll-mt-24 md:hidden reveal">
-      <h3 class="font-label-caps text-label-caps text-secondary mb-4 uppercase">Select Location</h3>
-      <div class="w-full max-w-sm flex border border-on-background relative">
-        <div class="absolute top-0 left-0 w-1/2 h-full bg-surface-container-highest transition-transform duration-300 ease-in-out" id="branch-slider"></div>
-        <button type="button" class="flex-1 py-4 font-mono-label text-mono-label z-10 text-center relative text-on-background" data-slider-pos="0">MANSOURA</button>
-        <button type="button" class="flex-1 py-4 font-mono-label text-mono-label z-10 text-center relative text-on-background" data-slider-pos="1">HAY EL-GAMAA</button>
-      </div>
-    </section>
-
-    <!-- BRANCH SELECTOR bar (Desktop) -->
-    <section class="hidden md:block border-y border-on-background py-8 mb-section-gap bg-background sticky top-[80px] z-40 reveal">
-      <div class="px-container-padding max-w-[1600px] mx-auto flex justify-between items-center gap-6">
-        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Select Location</span>
-        <div class="flex gap-12 font-headline-md text-headline-md tracking-tighter">
-          <button type="button" class="hover:text-primary transition-colors text-primary italic branch-btn">/ Soho</button>
-          <button type="button" class="hover:text-primary transition-colors text-on-background/40 branch-btn">/ Williamsburg</button>
-          <button type="button" class="hover:text-primary transition-colors text-on-background/40 branch-btn">/ Shibuya</button>
-        </div>
-      </div>
-    </section>
 
 
-    <!-- Gallery anchor — Explore scrolls here (offset for fixed header) -->
+    <!-- Gallery anchor â€” Explore scrolls here (offset for fixed header) -->
     <div id="gallery" class="scroll-mt-24" aria-hidden="true"></div>
     <!-- GALLERY masonry (Mobile) -->
     <section class="px-margin-mobile mb-section-gap w-full flex flex-col gap-4 md:hidden scroll-mt-24">
@@ -277,14 +293,14 @@
       <img alt="Logo Reference" class="w-24 h-24 object-contain opacity-50 mb-4 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Tk7l3qhUWQUNqyG23KXpueylRwnKJ1upR2Zbt-SZEfxGww9gH_2SK8eMRTj0uFVjJb5hCbJblBDPl8KIIoRXRX_Gda3fu31InhZHA_3W0REKnccfBz-6PBRI_OduBlcDNyIoX29lGmFO2wsjKniPijrjvtTN7vytfeGbn6r6zAr5tLGphjMzRn5cpouytNdzcftaF2wJZJtDPdrsQSMybQZ1NUU_PKkFaVJDIOJOcOuNpjZupnviAcCNxJZ8cmyNQQ"/>
       <div class="flex flex-col gap-4 w-full max-w-sm">
         <a href="menu.html" class="block w-full bg-primary text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-on-background transition-colors duration-300 text-center uppercase btn-interactive">View Menu</a>
-        <a href="#locations" class="anchor-link block w-full border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase btn-interactive">Find a Branch</a>
+        <a href="#locations" class="anchor-link block w-full border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase btn-interactive">Find us</a>
       </div>
     </section>
 
     <!-- FINAL CTA (Desktop) -->
     <section class="hidden md:flex min-h-[50vh] flex-col justify-center items-center px-container-padding text-center border-t border-on-background/10 mb-section-gap reveal">
       <h2 class="font-display-xl text-[64px] lg:text-[88px] xl:text-display-xl leading-none tracking-tighter uppercase mb-8">Ready to Drink?</h2>
-      <a href="menu.html" class="inline-block bg-on-background text-background px-12 py-5 font-label-caps text-label-caps tracking-widest hover:bg-primary transition-colors duration-300 btn-interactive">FIND YOUR NEAREST FIVE SLASH</a>
+      <a href="menu.html" class="inline-block bg-on-background text-background px-12 py-5 font-label-caps text-label-caps tracking-widest hover:bg-primary transition-colors duration-300 btn-interactive">VISIT Five/Cafe</a>
       <div class="mt-16 flex gap-8 font-mono-label text-mono-label text-secondary uppercase">
         <a class="hover:text-primary transition-colors" href="#">Instagram</a>
         <a class="hover:text-primary transition-colors" href="#">Twitter</a>
@@ -303,11 +319,12 @@
       <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase md:normal-case md:underline btn-interactive" href="#">Careers</a>
     </nav>
     <div class="font-label-caps md:font-mono-label text-label-caps md:text-mono-label text-secondary text-center uppercase md:normal-case">
-      © 2024 FIVE SLASH. ALL RIGHTS RESERVED.
+      آ© 2024 FIVE SLASH. ALL RIGHTS RESERVED.
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
