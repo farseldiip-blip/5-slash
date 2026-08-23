@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIVE SLASH - Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#5f5e5e",
+                      "surface-dim": "#dbdad9",
+                      "on-primary-fixed-variant": "#872000",
+                      "on-secondary-container": "#636262",
+                      "primary-container": "#d83900",
+                      "inverse-on-surface": "#f2f0f0",
+                      "surface-container": "#efeded",
+                      "secondary-container": "#e2dfde",
+                      "surface-container-highest": "#e3e2e2",
+                      "outline": "#926f66",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f5f3f3",
+                      "primary-fixed-dim": "#ffb5a0",
+                      "on-secondary": "#ffffff",
+                      "background": "#faf9f9",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#ffdbd1",
+                      "surface": "#faf9f9",
+                      "on-background": "#1b1c1c",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "tertiary-fixed": "#e2e2e2",
+                      "inverse-surface": "#303031",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "secondary-fixed": "#e5e2e1",
+                      "surface-tint": "#b12d00",
+                      "error-container": "#ffdad6",
+                      "primary": "#ad2c00",
+                      "on-primary-fixed": "#3b0900",
+                      "outline-variant": "#e7bdb2",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e3e2e2",
+                      "tertiary": "#5a5c5c",
+                      "tertiary-container": "#737575",
+                      "on-tertiary-container": "#fcfcfc",
+                      "on-primary-container": "#fffbff",
+                      "inverse-primary": "#ffb5a0",
+                      "on-surface-variant": "#5d4038",
+                      "on-primary": "#ffffff",
+                      "surface-bright": "#faf9f9",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-container-high": "#e9e8e8",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-padding": "40px",
+                      "section-gap": "160px",
+                      "gutter": "24px",
+                      "base": "8px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "mono-label": [
+                              "Geist"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-caps": [
+                              "Geist"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "84px",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "mono-label": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "38px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .slash-bg {
+            background: linear-gradient(135deg, transparent 49%, var(--on-background) 49%, var(--on-background) 51%, transparent 51%);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pt-24 pb-32 overflow-x-hidden md:hidden">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-background border-b border-on-background/10">
+<div class="flex justify-between items-center px-margin-mobile py-4 w-full h-16">
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 text-on-background">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-md tracking-tighter text-on-background m-0 p-0 leading-none">FIVE SLASH</h1>
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 text-on-background relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary w-4 h-4 rounded-full font-mono-label text-[10px] flex items-center justify-center">2</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer (Hidden by default, semantic representation) -->
+<nav class="fixed inset-0 z-[60] w-full h-full bg-background flex-col items-start justify-center gap-base p-container-padding hidden">
+<div class="flex flex-col w-full h-full bg-background">
+<h2 class="font-display-lg text-display-lg text-primary mb-12">FIVE SLASH</h2>
+<ul class="flex flex-col gap-6 w-full">
+<li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4" href="#"><span class="material-symbols-outlined">local_cafe</span>Menu</a></li>
+<li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4" href="#"><span class="material-symbols-outlined">menu_book</span>Manifesto</a></li>
+<li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4" href="#"><span class="material-symbols-outlined">location_on</span>Locations</a></li>
+<li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4" href="#"><span class="material-symbols-outlined">auto_stories</span>Journal</a></li>
+</ul>
+</div>
+</nav>
+<main class="flex flex-col w-full max-w-md mx-auto px-margin-mobile">
+<!-- Sticky Header for Categories & Branch -->
+<div class="sticky top-16 z-40 bg-background pt-4 pb-2 border-b border-on-background/10 -mx-margin-mobile px-margin-mobile mb-8">
+<div class="flex items-center justify-between mb-4">
+<button class="flex items-center gap-2 font-mono-label text-mono-label text-on-surface-variant hover:text-primary transition-colors border border-on-background/20 px-3 py-1 rounded">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                    SOHO FLAGSHIP
+                    <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</button>
+</div>
+<div class="overflow-x-auto no-scrollbar pb-2">
+<div class="flex gap-4 whitespace-nowrap font-label-caps text-label-caps">
+<a class="text-primary border-b-2 border-primary pb-1 px-1" href="#coffee">COFFEE</a>
+<a class="text-secondary hover:text-primary transition-colors pb-1 px-1" href="#iced">ICED</a>
+<a class="text-secondary hover:text-primary transition-colors pb-1 px-1" href="#matcha">MATCHA</a>
+<a class="text-secondary hover:text-primary transition-colors pb-1 px-1" href="#refreshers">REFRESHERS</a>
+<a class="text-secondary hover:text-primary transition-colors pb-1 px-1" href="#desserts">DESSERTS</a>
+</div>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="mb-8 relative w-full group">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-secondary group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-transparent border-0 border-b border-on-background/20 py-3 pl-8 pr-4 font-mono-label text-mono-label focus:ring-0 focus:border-b-2 focus:border-primary transition-all rounded-none placeholder:text-secondary" placeholder="SEARCH MENU..." type="text"/>
+</div>
+<p class="font-mono-label text-mono-label text-secondary mb-8">Prices shown for SOHO FLAGSHIP branch.</p>
+<!-- Category: Coffee -->
+<section class="mb-16 scroll-mt-32" id="coffee">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile mb-6">COFFEE</h2>
+<div class="flex flex-col border-t border-on-background/10">
+<!-- Item -->
+<div class="flex justify-between items-center py-5 border-b border-on-background/10 group cursor-pointer">
+<div class="flex-1 pr-4">
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-body-lg font-bold">POUR OVER</h3>
+<span class="bg-on-background text-background px-2 py-0.5 rounded-sm font-label-caps text-[10px] tracking-widest">SINGLE ORIGIN</span>
+</div>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Rotating selection of single-origin beans, brewed to order for clarity and nuance.</p>
+</div>
+<div class="text-right">
+<span class="font-mono-label text-body-lg font-medium block">$6.00</span>
+</div>
+</div>
+<!-- Item -->
+<div class="flex justify-between items-center py-5 border-b border-on-background/10 group cursor-pointer">
+<div class="flex-1 pr-4">
+<h3 class="font-headline-md text-body-lg font-bold mb-1">ESPRESSO</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Double shot of our signature house blend. Bright, syrupy, and intense.</p>
+</div>
+<div class="text-right">
+<span class="font-mono-label text-body-lg font-medium block">$4.00</span>
+</div>
+</div>
+<!-- Item -->
+<div class="flex justify-between items-center py-5 border-b border-on-background/10 group cursor-pointer">
+<div class="flex-1 pr-4">
+<h3 class="font-headline-md text-body-lg font-bold mb-1">CORTADO</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Equal parts espresso and lightly textured steamed milk.</p>
+</div>
+<div class="text-right">
+<span class="font-mono-label text-body-lg font-medium block">$4.50</span>
+</div>
+</div>
+<!-- Item -->
+<div class="flex justify-between items-center py-5 border-b border-on-background/10 group cursor-pointer">
+<div class="flex-1 pr-4">
+<h3 class="font-headline-md text-body-lg font-bold mb-1">LATTE</h3>
+<p class="font-body-md text-body-md text-secondary line-clamp-2">Double shot of espresso with heavily textured, creamy steamed milk.</p>
+</div>
+<div class="text-right">
+<span class="font-mono-label text-body-lg font-medium block">$5.50</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Image Divider -->
+<div class="w-full h-64 -mx-margin-mobile w-[calc(100%+40px)] mb-16 relative overflow-hidden bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125" data-alt="A minimalist overhead shot of an iced latte on a stark white background with harsh, high-contrast lighting creating a sharp, geometric shadow. The aesthetic is clean, clinical, and premium, evoking a modern fashion editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOVPbjav_muKW4zbEWJHJSZG33QgTSHDHTJ2LXcZOWp3rVONIBKOv3z0sEtu9laap6ihA6Hxk4aM1l1Hd3uUhUC8wmjnooNHEr5QxMDtpm2vmDi9vR0Kg_-wT0W90Yf-sAKiOmcGS1l_ZES_e5ll8C-m_nZarnvR7H7qf5rDORmAWxUmM1aPlf4Aq-iwptl8ac1XzhG62I7K72XTvv0o7R79Cnt4STdDzCKWhkiDSXfMcCb1_GIRd4"/>
+<div class="absolute inset-0 bg-background/20"></div>
+<div class="absolute bottom-4 left-margin-mobile flex items-center gap-2">
+<div class="w-8 h-1 bg-primary transform -skew-x-12"></div>
+<span class="font-label-caps text-label-caps text-background mix-blend-difference font-bold tracking-widest">COLD PRESS / ICED</span>
+</div>
+</div>
+<!-- Category: Iced -->
+<section class="mb-16 scroll-mt-32" id="iced">
+<div class="flex items-end justify-between mb-6">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile">ICED</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Card Item -->
+<div class="border border-on-background/10 flex flex-col p-3 hover:border-on-background transition-colors cursor-pointer group">
+<div class="w-full aspect-square bg-surface-container-low mb-3 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of cold brew coffee in a minimalist clear glass with large geometric ice cubes. Stark lighting, off-white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvVIJ1tV2qoOgdL_hBG580T5rn6Wy3_XNTLABLVKamBOrHkH_r5iXTRBstmki-RdZhMXz0MVgdzghQI0ZexHuPo25fXaJgkFp40LlmmtoCudbOsEZJfL6RTe8JoZsSvKixQ4n7nlSKuZ7BAcktWeaTOyHwlDtwLQXMN1A4lQE4AwbtgROJzU23b9dMRSa1MkJ1g2VljT0CGqco7DTQyiUIJcg752TSLodNnRxJqrEHLWLTHLJGhLuH"/>
+</div>
+<div class="flex justify-between items-start flex-col gap-1 mt-auto">
+<h3 class="font-headline-md text-body-md font-bold leading-tight">COLD BREW</h3>
+<span class="font-mono-label text-body-md font-medium text-primary">$5.50</span>
+</div>
+</div>
+<!-- Card Item -->
+<div class="border border-on-background/10 flex flex-col p-3 hover:border-on-background transition-colors cursor-pointer group">
+<div class="w-full aspect-square bg-surface-container-low mb-3 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An iced oat latte in a brutalist glass, rich espresso swirling into stark white milk. High contrast studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDELa00j0rSbI-nxkShvog9o2_tchmokEFFyLWdjfwK5VJ7BveVNW1nSFPtPC_sGz_K_QwPlDjGCqZETEsllL9-pV7rxXCGgy0v42q8Z4mXAXOR0yeMRC_obPivZP3l1Q4AklmhpUa5VAPKj3txk7CSjVlLGsvAI5HePTWB3OuGcRddsXNL8Tj9arYP-8NIsqeENEVO6oFV0jhO--yqIx2N1tFNuqlL31u0QShkN2BB7bZHCJwe5IZ"/>
+</div>
+<div class="flex justify-between items-start flex-col gap-1 mt-auto">
+<h3 class="font-headline-md text-body-md font-bold leading-tight">ICED OAT LATTE</h3>
+<span class="font-mono-label text-body-md font-medium text-primary">$6.50</span>
+</div>
+</div>
+<!-- Card Item -->
+<div class="border border-on-background/10 flex flex-col p-3 hover:border-on-background transition-colors cursor-pointer group">
+<div class="w-full aspect-square bg-surface-container-low mb-3 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Iced Americano in a tall thin glass. Pitch black coffee with condensation on the glass. Minimalist grey backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7JZFIlfKbtccGGZjvpuo9N3nq-1ZCT9j8rvvtsI0tafm8TRLx9YWrJrABn-vh6og5VoBFdY8mtzpjDuoMogcn8ZSzFeo69UjfnckypPdDvCBFwHA7XegHfOx7H1StKJuvPAwMvC3gtkkVWmVMAEhqaRRtP9xTNDB5LdWRhjeU_IkPDiya1kLwt8K_FjSTGsfKNjDw2hkjA0HMXrnya_X0cfwPbpDw83vYnDCngd-QpcveOMb2jYK8"/>
+</div>
+<div class="flex justify-between items-start flex-col gap-1 mt-auto">
+<h3 class="font-headline-md text-body-md font-bold leading-tight">ICED AMERICANO</h3>
+<span class="font-mono-label text-body-md font-medium text-primary">$4.50</span>
+</div>
+</div>
+<!-- Card Item -->
+<div class="border border-on-background/10 flex flex-col p-3 hover:border-on-background transition-colors cursor-pointer group">
+<div class="w-full aspect-square bg-surface-container-low mb-3 relative overflow-hidden flex items-center justify-center bg-secondary">
+<span class="material-symbols-outlined text-4xl text-background">image_not_supported</span>
+</div>
+<div class="flex justify-between items-start flex-col gap-1 mt-auto">
+<h3 class="font-headline-md text-body-md font-bold leading-tight">FLASH BREW</h3>
+<span class="font-mono-label text-body-md font-medium text-primary">$6.00</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="w-full mt-section-gap border-t border-on-background bg-background text-primary">
+<div class="flex flex-col items-center gap-gutter px-container-padding py-20 max-w-7xl mx-auto w-full">
+<h2 class="font-display-lg text-headline-lg text-on-background mb-4 text-center">FIVE SLASH</h2>
+<nav class="flex flex-wrap justify-center gap-4 mb-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Wholesale</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Careers</a>
+</nav>
+<p class="font-label-caps text-label-caps text-secondary text-center">© 2024 FIVE SLASH. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<!-- Fixed Floating Checkout Bar (Mobile specific addition for menu) -->
+<div class="fixed bottom-0 left-0 w-full bg-on-background text-background p-4 z-50 transform translate-y-0 transition-transform flex justify-between items-center shadow-lg rounded-t-lg">
+<div class="flex flex-col">
+<span class="font-mono-label text-xs text-secondary-fixed">2 ITEMS</span>
+<span class="font-headline-md text-lg font-bold">$11.50</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded flex items-center gap-2 font-label-caps text-label-caps tracking-widest hover:bg-primary-container transition-colors">
+            VIEW BAG <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="dark:dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIVE SLASH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400&amp;family=Geist:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5e5e",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-fixed-variant": "#872000",
+                        "on-secondary-container": "#636262",
+                        "primary-container": "#d83900",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-container": "#efeded",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-highest": "#e3e2e2",
+                        "outline": "#926f66",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-secondary": "#ffffff",
+                        "background": "#faf9f9",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "surface": "#faf9f9",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed": "#e2e2e2",
+                        "inverse-surface": "#303031",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-tint": "#b12d00",
+                        "error-container": "#ffdad6",
+                        "primary": "#ad2c00",
+                        "on-primary-fixed": "#3b0900",
+                        "outline-variant": "#e7bdb2",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e3e2e2",
+                        "tertiary": "#5a5c5c",
+                        "tertiary-container": "#737575",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-primary-container": "#fffbff",
+                        "inverse-primary": "#ffb5a0",
+                        "on-surface-variant": "#5d4038",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf9f9",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-high": "#e9e8e8",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "40px",
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "mono-label": ["Geist"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "label-caps": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "84px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "display-xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background border-b border-on-background/10 flat no shadows flex justify-between items-center px-container-padding py-6">
+<button class="text-on-background cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-display-lg text-headline-md tracking-tighter text-on-background flex items-center justify-center">
+            FIVE SLASH
+        </div>
+<button class="text-on-background cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</header>
+<main class="flex-grow pt-24">
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] flex flex-col justify-end px-margin-mobile pb-12 mb-section-gap">
+<div class="absolute inset-0 z-[-1]" data-alt="A striking high-contrast editorial photography shot of a minimalist coffee cup on a stark white pedestal against a deep charcoal background. The lighting is harsh and direct, creating strong architectural shadows. A subtle geometric slash motif is visible in the background framing. The overall aesthetic is premium, experimental fashion house minimalism." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAro5W9TiZhnIxlgCOPw0-VGU6ASWha-FITgd8LoSRoD4Df7yT3z8cpGrrmfosr5eCrXk13SLeNAC8i_PicPAdqcUUJqJb_F61On0zFq_iJtVBT-XOsJg9nJs6USY4cS4dcpaK2Jza4mLSHCVO7fIKWuvCWW--ZC0K8urhjcF_WNY2OHY1qnM-niPRvEFnAi539QOGi4sp7DRDXBc5b8HzOUmw0GW-KsosbFLi1E4n8mfGxam5jilT-')"></div>
+<div class="relative z-10 w-full flex flex-col gap-6">
+<h1 class="font-display-xl text-display-xl uppercase text-background w-full mix-blend-difference break-words">
+                    TAKE FIVE<br/>/ SIP LIFE
+                </h1>
+<div class="flex flex-row gap-4 w-full">
+<button class="flex-1 bg-on-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-primary transition-colors duration-300 text-center uppercase">
+                        Order Now
+                    </button>
+<button class="flex-1 border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase">
+                        Explore
+                    </button>
+</div>
+</div>
+</section>
+<!-- Manifesto -->
+<section class="px-margin-mobile mb-section-gap w-full">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase w-[90%] md:w-[70%]">
+                WE DON'T JUST MAKE COFFEE.<br/>WE MAKE MOMENTS.
+            </h2>
+<div class="w-16 h-2 bg-primary mt-8 transform -skew-x-12"></div>
+</section>
+<!-- Featured Drinks Horizontal Scroll -->
+<section class="w-full mb-section-gap pl-margin-mobile">
+<div class="flex items-center justify-between pr-margin-mobile mb-8">
+<h3 class="font-headline-md text-headline-md uppercase">SIGNATURES</h3>
+<span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">LIMITED</span>
+</div>
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Drink Card 1 -->
+<div class="snap-start min-w-[280px] w-[85vw] border border-surface-container-highest flex flex-col relative bg-background">
+<div class="h-64 w-full border-b border-surface-container-highest" data-alt="A minimalist overhead shot of an Iced V60 coffee served in a pristine geometric clear glass on a stark white textured table. Deep, harsh shadows cut diagonally across the composition like a slash. The dark rich color of the coffee contrasts sharply with the clinical white background. High-end editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcSx67rkBxIFYgkIy4azbL78BLUnpmNz1KN7OEqcFQ8ubX34F9CCwGhB_ZGc0wE2kyvVUNhY7k7yOnXtYEiUeZbH7w_zZyB41qg4xpXRWYDHAnmQLlDRbvl9pYQoJ2CrKsZGTUv31zIEX_ykwut7IBbi9FbFh0uW_GiGX3eVPp8Ijv1ZUQ3wTGnMIqgQs1uTsPj1ooUGMVwKHccFtB8Db9nQVk2hSKaPcFmJ3YMmD3ezn7FQWATFAx')"></div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">
+                            $5
+                        </div>
+<h4 class="font-mono-label text-mono-label uppercase">Iced V60</h4>
+<p class="font-body-md text-body-md text-secondary">Ethiopian Yirgacheffe, floral notes, crisp finish.</p>
+</div>
+</div>
+<!-- Drink Card 2 -->
+<div class="snap-start min-w-[280px] w-[85vw] border border-surface-container-highest flex flex-col relative bg-background">
+<div class="h-64 w-full border-b border-surface-container-highest" data-alt="A striking profile shot of a Matcha Latte in a tall minimalist cylindrical glass, sitting on a matte charcoal gray block. The vibrant green of the matcha creates an intense pop of color against the dark minimalist setting. A single dramatic spotlight illuminates the drink, casting a sharp shadow. High-contrast modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9qZlyGKcmfjIFJiAGC3IMyrvNWP48JB-rlGpZl0u4p--6gcghvoUL5SNqaM0kPUFMjTzqyfWpMLdmcLBPOPKXG_79MGzETuf5xuR8XEaHILi5HpxA_cB1rn0CHlyTVoDrzxrdNdn7aFeFwEtArfWFFbzytnuSuF68Lv5N5Bm_eTHpf3JjWAuUn7LIECPbRnmh9L6PQioBTipqr2rgtOUdbH8v9GQQpl87PtinAo-TXHWRySS9Iv0j')"></div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">
+                            $6
+                        </div>
+<h4 class="font-mono-label text-mono-label uppercase">Matcha Latte</h4>
+<p class="font-body-md text-body-md text-secondary">Ceremonial grade Uji matcha, steamed oat milk.</p>
+</div>
+</div>
+<!-- Drink Card 3 -->
+<div class="snap-start min-w-[280px] w-[85vw] border border-surface-container-highest flex flex-col relative bg-background pr-margin-mobile">
+<div class="h-64 w-full border-b border-surface-container-highest" data-alt="A close-up structural shot of a Spanish Latte in a heavy, squat ceramic mug. The latte art is perfectly symmetrical. The mug sits on a brushed steel surface. The lighting is cold and clinical, emphasizing the texture of the milk foam and the brutalist materials of the surface. Minimalist gallery coffee presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9BqaM3z7bMF90S1YOt7WUFF-hGDUACCiDWdhf6G_byMtX8t1nbQ0uNGOYl_9uv9QYAQpe_55y7YInKbAcYmT3h0KyAhgrbGQDDlVntzpZpplgoDzy4UFEUivxgZVq5Otv9AXA_gQRNGgq9uw-J4vqVhnM_NF0UmlvZIQHtqbdYRsPQ4Nccu5kMHTvVDc2cFt83wFmtpuVPn8TlJKBp6pzwxMXiKqc4TgdMFsZSYhr52zsBQz_VOhC')"></div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">
+                            $5
+                        </div>
+<h4 class="font-mono-label text-mono-label uppercase">Spanish Latte</h4>
+<p class="font-body-md text-body-md text-secondary">Sweet condensed milk, double ristretto shot.</p>
+</div>
+</div>
+</div>
+<style>
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+            </style>
+</section>
+<!-- Branch Selector -->
+<section class="px-margin-mobile mb-section-gap w-full flex flex-col items-center">
+<h3 class="font-label-caps text-label-caps text-secondary mb-4 uppercase">Select Location</h3>
+<div class="w-full max-w-sm flex border border-on-background relative">
+<div class="absolute inset-0 bg-surface-container-highest transition-transform duration-300 ease-in-out w-1/2" id="branch-slider"></div>
+<button class="flex-1 py-4 font-mono-label text-mono-label z-10 text-center relative text-on-background" onclick="document.getElementById('branch-slider').style.transform = 'translateX(0)'">
+                    MANSOURA
+                </button>
+<button class="flex-1 py-4 font-mono-label text-mono-label z-10 text-center relative text-on-background" onclick="document.getElementById('branch-slider').style.transform = 'translateX(100%)'">
+                    HAY EL-GAMAA
+                </button>
+</div>
+</section>
+<!-- Gallery Masonry (Mobile Stack) -->
+<section class="px-margin-mobile mb-section-gap w-full flex flex-col gap-4">
+<div class="w-full aspect-[4/5] bg-surface-container-highest border border-surface-container-highest" data-alt="A wide architectural shot of the FIVE SLASH cafe interior. The design is heavily inspired by 20th-century Swiss design and brutalism. Concrete walls, stark white minimalist furniture, and harsh geometric lines. A large red-orange slash logo is painted on a massive concrete pillar. The space feels like a contemporary art gallery rather than a cozy coffee shop." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDItADiMozHqrHmgMcVxkX0DZNvb4vi3w9chif1ntPfXT1lK608X9R8jhmYRcii72LBpFYT3idqK1BDi16eOdwYow4p_82PyFXfc7eZKLbtk-Jsvwf3fmkeA1PBlmI0U_csGxeGqNyF9CvtWWDqiGrym3Lm-B_9h5Tv9KKIp9F_aWRSi_7h-HkMSDKt97juUSsmAWJF1ZLKimlQYNyfeoKB5e9KEKRggL2fxVoQYrGVgPqrPu0dfkvm')"></div>
+<div class="flex gap-4 w-full aspect-[2/1]">
+<div class="flex-1 bg-surface-container-highest border border-surface-container-highest" data-alt="A tightly cropped macro shot of espresso dripping from a naked portafilter into a white ceramic demitasse cup. The lighting is dramatic, highlighting the rich crema and the mechanical precision of the espresso machine. High contrast, sharp focus, technical aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv11YYMaRCC_I9QsclJlnHCtEhIMywyd19yIV6JkoLZR2Sx0BUywyBOI-pcS9r4ubpKOhXBcQS9U9FiXRZDL_bOwiS2xLFFfzcXjqIwlMFqN7JaHCAFU3heYOgLlFZ0u2gy3g7COB_HO8YSWXD026MFgPjLefhF8hUroOe4T8FD2xb6ltwqcAP_VMGY3lue2hyySPqHRUUazUyldoAEX_o2-QGCEheFfRY87keYUawTSh4NhWr_FVr')"></div>
+<div class="flex-1 bg-primary border border-primary flex items-center justify-center">
+<span class="font-display-xl text-display-xl text-background opacity-20">/</span>
+</div>
+</div>
+<div class="w-full aspect-square bg-surface-container-highest border border-surface-container-highest" data-alt="A portrait of a barista wearing a structured, minimalist charcoal apron over a crisp white shirt, pouring latte art with intense concentration. The background is completely dark, isolating the subject in a pool of clinical white light. The image conveys precision, expertise, and a high-fashion approach to coffee making." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8-vUUp2RGzssMy5t8r_TXytRkFf80ltlM-ze5TCuMRulA6wnYHxn25MZINAfNQe4Hefq0RHjrLnjeoG1POn2LRjZCD4VuTP84XkD9kH9mFE1osq828AYywzcnZ1DYBJpf0tQeIsWsX7Cq_p5h7-_vsHBBNbceK1lKBYlcq8i_kUU6DWogxUUowqm692GBQM18MG7nUhDuOhpXAClOUFChXlMMG3YRF8khhKE2MK7XxbOwkmglqwES')"></div>
+</section>
+<!-- Final CTA -->
+<section class="px-margin-mobile mb-section-gap w-full flex flex-col items-center justify-center text-center gap-8 bg-inverse-surface py-20">
+<h2 class="font-display-lg text-headline-lg-mobile text-background uppercase w-full">
+                YOUR DAILY SLASH
+            </h2>
+<img alt="Logo Reference" class="w-24 h-24 object-contain opacity-50 mb-4 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Tk7l3qhUWQUNqyG23KXpueylRwnKJ1upR2Zbt-SZEfxGww9gH_2SK8eMRTj0uFVjJb5hCbJblBDPl8KIIoRXRX_Gda3fu31InhZHA_3W0REKnccfBz-6PBRI_OduBlcDNyIoX29lGmFO2wsjKniPijrjvtTN7vytfeGbn6r6zAr5tLGphjMzRn5cpouytNdzcftaF2wJZJtDPdrsQSMybQZ1NUU_PKkFaVJDIOJOcOuNpjZupnviAcCNxJZ8cmyNQQ"/>
+<div class="flex flex-col gap-4 w-full max-w-sm">
+<button class="w-full bg-primary text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-on-background transition-colors duration-300 text-center uppercase">
+                    View Menu
+                </button>
+<button class="w-full border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase">
+                    Find a Branch
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-on-background bg-background flex flex-col items-center gap-gutter px-container-padding py-20 max-w-7xl mx-auto">
+<div class="font-display-lg text-headline-lg text-on-background mb-8">
+            FIVE SLASH
+        </div>
+<div class="flex flex-col md:flex-row items-center gap-6 mb-12">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase" href="#">Wholesale</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase" href="#">Careers</a>
+</div>
+<div class="font-label-caps text-label-caps text-secondary text-center uppercase">
+            © 2024 FIVE SLASH. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

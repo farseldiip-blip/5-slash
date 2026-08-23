@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIVE SLASH | Premium Coffee House</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&amp;family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5e5e",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-fixed-variant": "#872000",
+                        "on-secondary-container": "#636262",
+                        "primary-container": "#d83900",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-container": "#efeded",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-highest": "#e3e2e2",
+                        "outline": "#926f66",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-secondary": "#ffffff",
+                        "background": "#faf9f9",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#ffdbd1",
+                        "surface": "#faf9f9",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "tertiary-fixed": "#e2e2e2",
+                        "inverse-surface": "#303031",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-tint": "#b12d00",
+                        "error-container": "#ffdad6",
+                        "primary": "#ad2c00",
+                        "on-primary-fixed": "#3b0900",
+                        "outline-variant": "#e7bdb2",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e3e2e2",
+                        "tertiary": "#5a5c5c",
+                        "tertiary-container": "#737575",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-primary-container": "#fffbff",
+                        "inverse-primary": "#ffb5a0",
+                        "on-surface-variant": "#5d4038",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf9f9",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-high": "#e9e8e8",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-padding": "40px",
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "mono-label": ["Geist"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "label-caps": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", { "lineHeight": "84px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "mono-label": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "display-xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "38px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .slash-pattern {
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(27, 28, 28, 0.05) 10px,
+                rgba(27, 28, 28, 0.05) 20px
+            );
+        }
+        .slash-primary {
+            background: linear-gradient(45deg, transparent 48%, var(--color-primary, #ad2c00) 48%, var(--color-primary, #ad2c00) 52%, transparent 52%);
+        }
+        .reveal-img-hover:hover > img {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-on-background/10 bg-background flex justify-between items-center px-container-padding py-6">
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="menu" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-display-lg text-headline-md tracking-tighter text-on-background">FIVE SLASH</div>
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</header>
+<!-- NavigationDrawer (Hidden by default, structure provided) -->
+<nav class="fixed inset-0 z-[60] w-full h-full bg-background hidden flex-col items-start justify-center gap-base p-container-padding" id="drawer">
+<!-- Drawer content would go here, managed by JS -->
+</nav>
+<main class="pt-[100px]">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-container-padding overflow-hidden mb-section-gap">
+<div class="absolute inset-0 slash-pattern z-0 opacity-50 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-12 gap-gutter w-full max-w-[1600px] mx-auto items-center">
+<!-- Text Column -->
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center mix-blend-difference relative z-20">
+<h1 class="font-display-xl text-display-xl text-surface-lowest leading-[0.85] tracking-tighter uppercase whitespace-nowrap">
+                        TAKE FIVE <br/> <span class="text-primary-fixed">/</span> SIP LIFE
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-lowest mt-12 max-w-md">
+                        A clinical yet vibrant approach to specialty coffee. Precision brewing meets high-fashion aesthetic in every pour.
+                    </p>
+<div class="mt-12">
+<button class="bg-on-background text-background px-8 py-4 font-mono-label text-mono-label uppercase tracking-widest hover:bg-primary transition-colors duration-300">
+                            Discover the Menu
+                        </button>
+</div>
+</div>
+<!-- Image Column -->
+<div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0 z-10">
+<div class="relative w-full aspect-[3/4] overflow-hidden border border-on-background/20 bg-surface-container">
+<img class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out" data-alt="High-fashion, minimalist photography of a premium iced coffee drink in a geometric glass. Shot in a bright, stark white studio setting with harsh, dramatic lighting creating sharp shadows. The aesthetic is clean, clinical, and sophisticated, avoiding traditional cozy cafe tropes. Accents of stark black and a hint of vibrant red-orange in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAIahfNXv_tEyJDN-oRs-S6AywChXRNA3i_ckJTaBrcmbT-7PRzi-zgIBAqYzf9N7_e_n-YgCsOx8iZGLy67ZJATFQYMslQmMYfpfIuFmWPK-qLpKjbQCaDfCoKN2231K2jqdoJIlpoJP-BiAs-fL7G05PyFZiPXmdPHEVflTtk2Tl_X06g2_QeLmxqcEl0JtZO3sQi4tyDpLtDbrbUaGE_IDXLKZcAsKEiHlCsyjou7kEd1mn6AH"/>
+</div>
+<!-- Large semi-transparent slash -->
+<div class="absolute -top-1/4 -right-1/4 w-[150%] h-[150%] bg-primary mix-blend-multiply opacity-20 pointer-events-none rotate-45 transform origin-center"></div>
+</div>
+</div>
+</section>
+<!-- Manifesto Section -->
+<section class="min-h-screen flex flex-col justify-center items-center px-container-padding bg-inverse-surface text-background relative overflow-hidden mb-section-gap">
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<div class="w-full h-full slash-primary opacity-30"></div>
+</div>
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<span class="font-label-caps text-label-caps tracking-[0.2em] text-primary-fixed block mb-8">THE MANIFESTO</span>
+<h2 class="font-headline-lg text-headline-lg md:text-[80px] leading-[1.1] tracking-tight uppercase">
+                    WE DON'T JUST MAKE COFFEE.<br/>
+                    WE MAKE <span class="text-primary-fixed italic pr-2">MOMENTS.</span>
+</h2>
+<div class="w-px h-32 bg-primary mx-auto mt-16 rotate-45"></div>
+</div>
+</section>
+<!-- Featured Drinks -->
+<section class="px-container-padding max-w-[1600px] mx-auto mb-section-gap">
+<div class="flex justify-between items-end mb-16 border-b border-on-background pb-6">
+<h2 class="font-headline-lg text-headline-lg uppercase">Curated Pours</h2>
+<a class="font-mono-label text-mono-label hover:text-primary transition-colors flex items-center gap-2" href="#">
+                    FULL MENU <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-on-background/10">
+<!-- Item 1 -->
+<div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">SIGNATURE</span>
+<span class="font-display-lg text-headline-md tracking-tighter">01</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">The Void</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">AeroPress extraction, activated charcoal, Madagascar vanilla.</p>
+<span class="font-mono-label text-mono-label">$7.00</span>
+</div>
+<!-- Hover Image Reveal -->
+<div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none p-4">
+<img class="w-full h-full object-cover object-center filter grayscale contrast-125" data-alt="A striking minimalist close-up of a jet black coffee beverage in a clear, geometric tumbler. The background is a stark, pristine white gallery wall. The lighting is harsh and direct, casting a solid, sharp shadow. The aesthetic is high-contrast, modern, and clinical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEkjcXtycjJrM8jO4ZkS0rTOV0aHQLXv7dDt3JaqarYW4Y8gPV_Lkowj6ELxLPN-zjVvAnM14tbCtr6GeW2OhhjK8I_maFjrnwX3FOpJlv3a8zmedlNmkG17HsHebMx6eDXoOBbiRRYsa8vuDrLNpF96jHVYxMqAFQkuyGp8JDbJIRbLMb7H73q8une86hsfciu6vRTiWQoEuCeWDhRDi-3xuFWoGvkb-xHIFYwa5k7U1i3PggFRz0"/>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-primary text-background px-3 py-1">POUR OVER</span>
+<span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">02</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Neon Geisha</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Panama Finca Deborah. Notes of jasmine, bergamot, raw honey.</p>
+<span class="font-mono-label text-mono-label">$12.00</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">ESPRESSO</span>
+<span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">03</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Cortado / Red</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Double ristretto, textured oat milk, dusting of cayenne.</p>
+<span class="font-mono-label text-mono-label">$5.50</span>
+</div>
+<div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none p-4">
+<img class="w-full h-full object-cover object-center filter grayscale contrast-125" data-alt="A minimalist top-down view of a cortado in a stark white ceramic cup sitting on a polished concrete surface. A single, bold streak of red-orange powder crosses the foam surface. The scene is brightly lit with high contrast and deep, clinical shadows, resembling editorial food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6nrrxF7_vNmtS6tvjm92CQctJuO4Skmha8clkezPsETDIibBtrkRwz9JBScF2Xcsor2k7CY4goO_i0u8djqzWkqj65frIdnddE800XhjeuLIUsYkuiEtZ9rIoIipxCYvjd-pi_VrfP13a1e2vQAIjBoCRwOOdCQdhJHwRkmtqwYAihUvuSIniL6E125P2YrIe1Jil-ftwsahN00Vse6I3NynVB6LkkRWaD0LtYByzIHb7Ux3381-"/>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps border border-on-background px-3 py-1">COLD</span>
+<span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">04</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Kyoto Drip</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">12-hour slow drip over ice. Intense, syrupy, zero acidity.</p>
+<span class="font-mono-label text-mono-label">$8.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Branch Selection (Horizontal Bar) -->
+<section class="border-y border-on-background py-8 mb-section-gap bg-background sticky top-[80px] z-40">
+<div class="px-container-padding max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Select Location</span>
+<div class="flex gap-12 font-headline-md text-headline-md tracking-tighter">
+<button class="hover:text-primary transition-colors text-primary italic">/ Soho</button>
+<button class="hover:text-primary transition-colors text-on-background/40">/ Williamsburg</button>
+<button class="hover:text-primary transition-colors text-on-background/40">/ Shibuya</button>
+</div>
+</div>
+</section>
+<!-- Immersive Gallery (Asymmetric) -->
+<section class="px-container-padding max-w-[1600px] mx-auto mb-section-gap">
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Large Lead Image -->
+<div class="col-span-12 md:col-span-8 h-[600px] bg-surface-container border border-on-background/10 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A wide, sweeping architectural shot of a modern, minimalist cafe interior. Concrete floors, stark white walls, and sharp, geometric matte black steel fixtures. The espresso machine is a sleek, custom-built metallic object. Natural light floods through massive floor-to-ceiling windows, creating strong, angular shadows. A singular red-orange neon slash adds a pop of color to the clinical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEhmgfcXOZncxXxmnkoJmqVQNOwxgaQaBHr_976mqmopgAcFAEAJgTzIQHRD5zbZ3yUxbMKH8oAzUU-9rdqKozNR-LPvuPNtw2rBBsyctZEDrvwqwrx_RjIYsArn9fWWHDOU29zus2hyA1hPqcojk07lR68BFGMVfmkNQH0l1Dplf68XB75W6Ds08a1akSDUmQxI0PI5pRbCHd6MtrQgIniYiTk95INDMvTgFgjkkii3y4nYguRF6"/>
+<div class="absolute bottom-6 left-6 bg-background px-4 py-2 font-mono-label text-mono-label border border-on-background">SPACE / 01</div>
+</div>
+<!-- Stacked smaller images -->
+<div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-surface-container border border-on-background/10 relative overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale" data-alt="Close up photography of barista hands pouring water from a sleek, matte black gooseneck kettle into a glass pour-over dripper. The background is a blurred, pristine white counter. High contrast, bright lighting, emphasizing precision and cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRWNPFwMDaVJFAgLL64ZH3KKFWsUCCgYx0o-JM9If9pdkhxIBwee4qL3dRkhYjubHL8J35xABiKf2iOgyLA2BtmNJ76LhSYe_qxK4z_sOeRlvejpPmA2sIovRJ8nhCC--Nfbh_tHU4BOMinyEieizAnHv76NQkCmizRsqlakM_aAw2Ke3H2nSQrqc2xdCOamoIU1wXBQP8cmmDs9q5jRnbeWIQjSOinMBTzYKf7ImyGlrY1PCWTQr"/>
+</div>
+<div class="flex-1 bg-primary text-background p-8 flex flex-col justify-end">
+<span class="font-display-lg text-[64px] leading-none tracking-tighter">/ / /</span>
+<p class="font-mono-label text-mono-label mt-4 opacity-80 uppercase">Precision in every drop.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="min-h-[50vh] flex flex-col justify-center items-center px-container-padding text-center border-t border-on-background/10 mb-section-gap">
+<h2 class="font-display-xl text-display-xl tracking-tighter uppercase mb-8">Ready to Drink?</h2>
+<button class="bg-on-background text-background px-12 py-5 font-label-caps text-label-caps tracking-widest hover:bg-primary transition-colors duration-300">
+                FIND YOUR NEAREST FIVE SLASH
+            </button>
+<div class="mt-16 flex gap-8 font-mono-label text-mono-label text-secondary uppercase">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">Journal</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap border-t border-on-background dark:border-surface-container-highest bg-background dark:bg-background flex flex-col items-center gap-gutter px-container-padding py-20 max-w-7xl mx-auto w-full transition-all duration-200">
+<div class="font-display-lg text-headline-lg text-on-background mb-8">FIVE SLASH</div>
+<nav class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Wholesale</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed underline transition-colors" href="#">Careers</a>
+</nav>
+<div class="font-label-caps text-label-caps text-secondary">
+            © 2024 FIVE SLASH. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>
