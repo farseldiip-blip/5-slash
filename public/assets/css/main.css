@@ -1,0 +1,265 @@
+/* FIVE SLASH — Shared styles */
+/* Design system: design/reference/DESIGN.md — Minimalism + High-Contrast Boldness */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Slash motifs — 45° diagonal, the brand's geometric signature */
+.slash-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(27, 28, 28, 0.05) 10px,
+    rgba(27, 28, 28, 0.05) 20px
+  );
+}
+
+.slash-primary {
+  background: linear-gradient(
+    45deg,
+    transparent 48%,
+    var(--color-primary, #ad2c00) 48%,
+    var(--color-primary, #ad2c00) 52%,
+    transparent 52%
+  );
+}
+
+.slash-bg {
+  background: linear-gradient(135deg, transparent 49%, var(--tw-colors-secondary-fixed, #e5e2e1) 50%, transparent 51%);
+  background-size: 10px 10px;
+}
+
+@media (max-width: 767px) {
+  .slash-bg {
+    background: linear-gradient(135deg, transparent 49%, var(--tw-colors-on-background, #1b1c1c) 49%, var(--tw-colors-on-background, #1b1c1c) 51%, transparent 51%);
+    background-size: 20px 20px;
+  }
+}
+
+/* Product card image reveal (desktop menu) */
+.reveal-img-container:hover .reveal-img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Menu grid hairlines */
+.menu-grid-lines > div {
+  border-bottom: 1px solid var(--tw-colors-surface-container-highest, #e3e2e2);
+  border-right: 1px solid var(--tw-colors-surface-container-highest, #e3e2e2);
+}
+
+.menu-grid-lines > div:nth-child(3n) {
+  border-right: none;
+}
+
+/* Scrollbar hiding for horizontal scrollers */
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar,
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================================
+   Motion system — premium, purposeful, performant
+   Only transform + opacity. Respects prefers-reduced-motion.
+   Durations: micro 180ms, base 360ms, slow 700ms, hero 900ms
+   Easings: premium cubic-bezier(0.22,1,0.36,1), out-expo (0.16,1,0.3,1)
+   ======================================================== */
+:root {
+  --dur-micro: 180ms;
+  --dur-base: 360ms;
+  --dur-slow: 700ms;
+  --dur-hero: 900ms;
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header — subtle elevation on scroll */
+#site-header {
+  transition: background-color var(--dur-base) var(--ease-out),
+    backdrop-filter var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out);
+}
+#site-header.header--scrolled {
+  background-color: rgba(250, 249, 249, 0.92);
+  backdrop-filter: blur(10px) saturate(1.1);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  box-shadow: 0 1px 0 rgba(27, 28, 28, 0.08);
+}
+
+/* Drawer — fade + lift, plus staggered links */
+#nav-drawer {
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+#nav-drawer:not(.hidden) {
+  animation: drawerIn var(--dur-base) var(--ease-premium) both;
+}
+#nav-drawer.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes drawerIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#nav-drawer #drawer-title,
+#nav-drawer ul li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-premium);
+}
+#nav-drawer:not(.hidden) #drawer-title { opacity: 1; transform: none; transition-delay: 80ms; }
+#nav-drawer:not(.hidden) ul li:nth-child(1) { opacity: 1; transform: none; transition-delay: 110ms; }
+#nav-drawer:not(.hidden) ul li:nth-child(2) { opacity: 1; transform: none; transition-delay: 170ms; }
+#nav-drawer:not(.hidden) ul li:nth-child(3) { opacity: 1; transform: none; transition-delay: 230ms; }
+#nav-drawer:not(.hidden) ul li:nth-child(4) { opacity: 1; transform: none; transition-delay: 290ms; }
+#nav-drawer:not(.hidden) ul li:nth-child(5) { opacity: 1; transform: none; transition-delay: 350ms; }
+
+/* Hero — choreographed entrance */
+.hero-media {
+  opacity: 0;
+  transform: scale(1.04);
+  animation: heroMedia 1.3s var(--ease-out) 0.05s both;
+}
+.hero-title {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroTitle var(--dur-hero) var(--ease-premium) 0.18s both;
+}
+.hero-copy {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroCopy 0.7s var(--ease-premium) 0.42s both;
+}
+.hero-actions {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: heroActions 0.6s var(--ease-premium) 0.55s both;
+}
+.hero-image {
+  opacity: 0;
+  transform: scale(0.98) translateY(8px);
+  animation: heroImage 1s var(--ease-premium) 0.25s both;
+}
+.hero-slash {
+  opacity: 0;
+  animation: heroSlash 1.2s var(--ease-out) 0.4s both;
+}
+@keyframes heroMedia { to { opacity: 1; transform: scale(1); } }
+@keyframes heroTitle { to { opacity: 1; transform: none; } }
+@keyframes heroCopy { to { opacity: 1; transform: none; } }
+@keyframes heroActions { to { opacity: 1; transform: none; } }
+@keyframes heroImage { to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes heroSlash { to { opacity: 1; } }
+
+/* Scroll reveals — base */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-premium);
+  will-change: opacity, transform;
+}
+.reveal--up { transform: translateY(18px); }
+.reveal--scale {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-premium);
+}
+.reveal--clip {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.85s var(--ease-premium), opacity var(--dur-base) var(--ease-out);
+}
+.reveal--line {
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 1;
+  transition: transform 0.9s var(--ease-premium);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+}
+.reveal--line.is-in { transform: scaleY(1); }
+
+/* Image reveal wrapper — subtle scale */
+.img-reveal {
+  overflow: hidden;
+}
+.img-reveal img {
+  transform: scale(1.06);
+  transition: transform 1.1s var(--ease-out);
+  will-change: transform;
+}
+.img-reveal.is-in img { transform: scale(1); }
+
+/* Stagger — applied to parent, delays children */
+.stagger > *:nth-child(1) { transition-delay: 0ms; }
+.stagger > *:nth-child(2) { transition-delay: 90ms; }
+.stagger > *:nth-child(3) { transition-delay: 180ms; }
+.stagger > *:nth-child(4) { transition-delay: 270ms; }
+.stagger > *:nth-child(5) { transition-delay: 360ms; }
+
+/* Gallery — distinctive: clip on container, scale on image, stagger */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(12px) scale(0.985);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-premium);
+}
+.gallery-item.is-in {
+  opacity: 1;
+  transform: none;
+}
+.gallery-item .gallery-img {
+  transform: scale(1.06);
+  transition: transform 1.15s var(--ease-out);
+}
+.gallery-item.is-in .gallery-img { transform: scale(1); }
+@media (hover: hover) {
+  .gallery-item:hover .gallery-img { transform: scale(1.04); }
+  .gallery-item:hover { transform: translateY(-2px); }
+}
+
+/* Cards — lift + stagger, image zoom on hover (desktop) */
+.card-lift {
+  transition: transform var(--dur-base) var(--ease-premium), background-color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+}
+@media (hover: hover) {
+  .card-lift:hover { transform: translateY(-3px); }
+}
+
+/* Buttons & links — micro-interactions (transform only) */
+.btn-interactive {
+  transition: transform var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out), opacity var(--dur-micro) var(--ease-out);
+}
+.btn-interactive:hover { transform: translateY(-1px); }
+.btn-interactive:active { transform: translateY(0) scale(0.99); }
+.link-arrow .arrow-icon {
+  transition: transform var(--dur-micro) var(--ease-premium);
+}
+.link-arrow:hover .arrow-icon { transform: translateX(4px); }
+.icon-shift {
+  transition: transform var(--dur-micro) var(--ease-premium);
+}
+.group:hover .icon-shift,
+a:hover .icon-shift { transform: translateX(3px); }
+
+/* Reduced motion — snap to end, no scroll jank */
+@media (prefers-reduced-motion: reduce) {
+  .hero-media, .hero-title, .hero-copy, .hero-actions, .hero-image, .hero-slash { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .reveal, .reveal--scale, .reveal--clip, .reveal--line, .gallery-item, .img-reveal img, .gallery-item .gallery-img { transition: none !important; opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  #nav-drawer, #nav-drawer #drawer-title, #nav-drawer ul li { transition: none !important; opacity: 1 !important; transform: none !important; animation: none !important; }
+  #site-header { transition: none !important; }
+}

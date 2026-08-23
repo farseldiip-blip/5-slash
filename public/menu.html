@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>FIVE SLASH - Menu</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Hanken+Grotesk:wght@700;800;400&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><style>.reveal,.reveal--clip,.reveal--scale,.reveal--line,.gallery-item,.img-reveal,.hero-media,.hero-title,.hero-copy,.hero-actions,.hero-image,.hero-slash{opacity:1 !important;transform:none !important;clip-path:none !important;animation:none !important;}</style></noscript>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary selection:text-on-primary overflow-x-hidden">
+  <!-- TopAppBar -->
+  <header id="site-header" class="fixed top-0 w-full z-50 bg-background border-b border-on-background/10 flex justify-between items-center px-margin-mobile md:px-container-padding py-4 md:py-6 h-16 md:h-auto">
+    <button class="text-on-background cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center -ml-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+      <span class="material-symbols-outlined text-primary text-[24px] md:text-[32px]">menu</span>
+    </button>
+    <a href="index.html" aria-label="Go to homepage" class="font-display-lg text-headline-md tracking-tighter text-on-background leading-none hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm px-2 py-2 min-h-[44px] flex items-center">FIVE SLASH</a>
+    <a href="menu.html" aria-current="page" aria-label="View menu, current page" class="text-primary btn-interactive min-h-[44px] flex items-center justify-center gap-1.5 -mr-2 px-2 md:px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm">
+      <span class="material-symbols-outlined text-primary text-[24px] md:text-[26px]">restaurant_menu</span>
+      <span class="hidden md:inline font-label-caps text-label-caps">Menu</span>
+    </a>
+  </header>
+
+  <!-- NavigationDrawer -->
+  <nav class="fixed inset-0 z-[70] w-full h-full bg-background hidden flex-col p-margin-mobile md:p-container-padding overflow-y-auto" id="nav-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <button class="absolute top-4 right-4 cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" id="close-drawer" aria-label="Close menu">
+      <span class="material-symbols-outlined text-primary text-[32px]" data-icon="close">close</span>
+    </button>
+    <div class="flex flex-col justify-center w-full h-full">
+      <a href="index.html" id="drawer-title" class="font-display-lg text-headline-lg tracking-tighter text-primary mb-12 inline-block hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">FIVE SLASH</a>
+      <ul class="flex flex-col gap-1 w-full">
+        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+        <li><a class="font-display-lg text-headline-lg uppercase text-primary italic flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="menu.html" aria-current="page"><span class="w-4 h-px bg-primary"></span><span class="material-symbols-outlined">local_cafe</span>Menu</a></li>
+        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html#manifesto"><span class="material-symbols-outlined">menu_book</span>Manifesto</a></li>
+        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html#locations"><span class="material-symbols-outlined">location_on</span>Locations</a></li>
+        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#"><span class="material-symbols-outlined">auto_stories</span>Journal</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ================= DESKTOP LAYOUT (md+) ================= -->
+  <div class="flex-grow hidden md:flex pt-[100px]">
+    <!-- Sidebar Filter -->
+    <aside class="flex flex-col w-64 fixed h-[calc(100vh-100px)] border-r border-surface-container-highest bg-background z-40 p-container-padding gap-8 overflow-y-auto">
+      <div>
+        <h3 class="font-label-caps text-label-caps text-secondary mb-4 uppercase">Current Location</h3>
+        <div class="flex items-center gap-2 border-b border-on-background pb-2 cursor-pointer group">
+          <span class="material-symbols-outlined text-sm group-hover:text-primary transition-colors">location_on</span>
+          <span class="font-mono-label text-mono-label group-hover:text-primary transition-colors">SOHO FLAGSHIP</span>
+          <span class="material-symbols-outlined text-sm ml-auto group-hover:text-primary transition-colors">expand_more</span>
+        </div>
+      </div>
+      <div>
+        <div class="relative">
+          <input class="w-full bg-transparent border-0 border-b border-surface-container-highest pb-2 pl-0 focus:ring-0 focus:border-primary font-mono-label text-mono-label placeholder-secondary transition-colors outline-none" placeholder="Search menu..." type="text"/>
+          <span class="material-symbols-outlined absolute right-0 bottom-2 text-secondary text-sm">search</span>
+        </div>
+      </div>
+      <nav class="flex flex-col gap-4 mt-4" aria-label="Menu pages">
+        <h3 class="font-label-caps text-label-caps text-secondary mb-2 uppercase">Menu Pages</h3>
+        <a class="font-headline-md text-headline-md text-primary italic group flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#menu-page-1">
+          <span class="w-4 h-px bg-primary mr-4"></span> PAGE 01
+        </a>
+        <a class="font-headline-md text-headline-md text-secondary hover:text-primary transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#menu-page-2">PAGE 02</a>
+        <a class="font-mono-label text-mono-label text-secondary hover:text-primary transition-colors pt-2 inline-flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back to Home
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Product Grid — Image-based menu -->
+    <main id="menu" class="w-full ml-64 p-container-padding md:p-12 lg:p-16 scroll-mt-24">
+      <!-- Breadcrumb: never trap the user — explicit path back home -->
+      <nav aria-label="Breadcrumb" class="mb-6 flex items-center gap-2 font-mono-label text-mono-label text-secondary reveal">
+        <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 -ml-1 py-1">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span> Home
+        </a>
+        <span aria-hidden="true" class="text-on-background/20">/</span>
+        <span class="text-primary" aria-current="page">Menu</span>
+      </nav>
+      <div class="mb-10 border-b border-on-background pb-8 flex flex-wrap justify-between items-end gap-4 reveal">
+        <div>
+          <span class="inline-block bg-on-background text-on-primary font-label-caps text-label-caps px-3 py-1 mb-4 rounded uppercase">Restaurant Menu</span>
+          <h1 class="font-display-xl text-[48px] lg:text-display-xl tracking-tighter uppercase leading-none">MENU</h1>
+          <p class="font-body-md text-body-md text-secondary mt-3 max-w-xl">Tap any page to enlarge. Replace the SVGs in <code class="bg-surface-container px-1.5 py-0.5 rounded font-mono-label text-mono-label">public/assets/images/menu/</code> with your exported JPGs.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="hidden lg:inline-flex items-center gap-2 border border-on-background px-5 py-3 font-label-caps text-label-caps hover:bg-on-background hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary btn-interactive">
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back to Home
+          </a>
+          <span class="font-mono-label text-mono-label text-secondary hidden lg:block">2 pages</span>
+        </div>
+      </div>
+      <!-- Menu pages — 2-up on desktop, keeps Stitch border + tonal language -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 stagger">
+        <figure id="menu-page-1" class="group relative border border-on-background/10 bg-surface-container-lowest overflow-hidden cursor-zoom-in hover:border-primary/30 transition-colors focus-within:border-primary/40 gallery-item">
+          <button class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary" aria-label="Enlarge menu page 1" data-lightbox="assets/images/menu/menu-1.svg"></button>
+          <div class="aspect-[3/4] bg-surface-container-lowest relative overflow-hidden">
+            <img src="assets/images/menu/menu-1.svg" data-fallback="assets/images/menu/menu-1.jpg" alt="FIVE SLASH menu — page 1, espresso and filter" class="w-full h-full object-contain p-2 md:p-3 gallery-img" loading="lazy" onerror="if(this.dataset.fallback &amp;&amp; !this.dataset.tried){this.dataset.tried='1'; this.src=this.dataset.fallback;}" />
+            <span class="absolute bottom-3 left-3 bg-background border border-on-background px-3 py-1 font-mono-label text-mono-label pointer-events-none">PAGE 01</span>
+            <span class="absolute top-3 right-3 bg-primary text-on-primary px-2.5 py-1 font-label-caps text-label-caps pointer-events-none">TAP TO ENLARGE</span>
+          </div>
+          <figcaption class="px-4 py-3 border-t border-on-background/10 flex items-center justify-between bg-background">
+            <span class="font-label-caps text-label-caps text-secondary">ESPRESSO &amp; FILTER</span>
+            <span class="font-mono-label text-mono-label text-secondary hidden sm:block">Page 1 of 2</span>
+          </figcaption>
+        </figure>
+        <figure id="menu-page-2" class="group relative border border-on-background/10 bg-surface-container-lowest overflow-hidden cursor-zoom-in hover:border-primary/30 transition-colors focus-within:border-primary/40 gallery-item">
+          <button class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary" aria-label="Enlarge menu page 2" data-lightbox="assets/images/menu/menu-2.svg"></button>
+          <div class="aspect-[3/4] bg-surface-container-lowest relative overflow-hidden">
+            <img src="assets/images/menu/menu-2.svg" data-fallback="assets/images/menu/menu-2.jpg" alt="FIVE SLASH menu — page 2, iced and seasonal" class="w-full h-full object-contain p-2 md:p-3 gallery-img" loading="lazy" onerror="if(this.dataset.fallback &amp;&amp; !this.dataset.tried){this.dataset.tried='1'; this.src=this.dataset.fallback;}" />
+            <span class="absolute bottom-3 left-3 bg-background border border-on-background px-3 py-1 font-mono-label text-mono-label pointer-events-none">PAGE 02</span>
+            <span class="absolute top-3 right-3 bg-primary text-on-primary px-2.5 py-1 font-label-caps text-label-caps pointer-events-none">TAP TO ENLARGE</span>
+          </div>
+          <figcaption class="px-4 py-3 border-t border-on-background/10 flex items-center justify-between bg-background">
+            <span class="font-label-caps text-label-caps text-secondary">ICED &amp; SEASONAL</span>
+            <span class="font-mono-label text-mono-label text-secondary hidden sm:block">Page 2 of 2</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-2 bg-on-background text-background px-6 py-3 font-label-caps text-label-caps hover:bg-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary btn-interactive">
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back to Home
+        </a>
+        <a href="index.html#locations" class="inline-flex items-center gap-2 border border-on-background px-6 py-3 font-label-caps text-label-caps hover:bg-on-background hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary btn-interactive">
+          Find a Branch <span class="material-symbols-outlined text-[16px]">location_on</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <!-- ================= MOBILE LAYOUT (below md) ================= -->
+  <main class="flex-grow md:hidden pt-16">
+    <div class="flex flex-col w-full max-w-md mx-auto px-margin-mobile">
+      <!-- Mobile breadcrumb — explicit Home escape, never rely on back button -->
+      <nav aria-label="Breadcrumb" class="pt-3 pb-2 flex items-center gap-2 font-mono-label text-mono-label text-secondary reveal">
+        <a href="index.html" class="inline-flex items-center gap-1.5 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 -ml-1 py-2 min-h-[44px]">
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span> Back to Home
+        </a>
+        <span aria-hidden="true" class="text-on-background/20">/</span>
+        <span class="text-primary">Menu</span>
+      </nav>
+      <!-- Sticky Header for Location -->
+      <div class="sticky top-16 z-40 bg-background pt-2 pb-2 border-b border-on-background/10 -mx-margin-mobile px-margin-mobile mb-6">
+        <div class="flex items-center justify-between">
+          <span class="inline-flex items-center gap-2 font-mono-label text-mono-label text-on-surface-variant border border-on-background/20 px-3 py-1.5 rounded">
+            <span class="material-symbols-outlined text-sm">location_on</span> SOHO FLAGSHIP
+          </span>
+          <span class="font-label-caps text-label-caps text-secondary">2 PAGES</span>
+        </div>
+      </div>
+      <p class="font-mono-label text-mono-label text-secondary mb-6">Tap any page to enlarge — pinch to zoom.</p>
+
+      <!-- Menu - image-based (mobile) -->
+      <section id="m-menu" class="mb-8 scroll-mt-24 reveal">
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tight">MENU</h1>
+        <p class="font-mono-label text-mono-label text-secondary mt-2">2 pages - tap to enlarge</p>
+        <div class="mt-6 flex flex-col gap-5 stagger">
+          <figure id="m-menu-page-1" class="group relative border border-on-background/10 bg-surface-container-lowest overflow-hidden cursor-zoom-in hover:border-primary/30 transition-colors gallery-item">
+            <button class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary" aria-label="Enlarge menu page 1" data-lightbox="assets/images/menu/menu-1.svg"></button>
+            <div class="aspect-[3/4] bg-surface-container-lowest relative overflow-hidden">
+              <img src="assets/images/menu/menu-1.svg" data-fallback="assets/images/menu/menu-1.jpg" alt="FIVE SLASH menu - page 1, espresso and filter" class="w-full h-full object-contain p-2 gallery-img" loading="lazy" onerror="if(this.dataset.fallback && !this.dataset.tried){this.dataset.tried='1'; this.src=this.dataset.fallback;}" />
+              <span class="absolute bottom-3 left-3 bg-background border border-on-background px-3 py-1 font-mono-label text-mono-label pointer-events-none">PAGE 01</span>
+            </div>
+            <figcaption class="px-4 py-3 border-t border-on-background/10 bg-background flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-secondary">ESPRESSO & FILTER</span>
+              <span class="font-mono-label text-mono-label text-secondary">Tap to zoom</span>
+            </figcaption>
+          </figure>
+          <figure id="m-menu-page-2" class="group relative border border-on-background/10 bg-surface-container-lowest overflow-hidden cursor-zoom-in hover:border-primary/30 transition-colors gallery-item">
+            <button class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary" aria-label="Enlarge menu page 2" data-lightbox="assets/images/menu/menu-2.svg"></button>
+            <div class="aspect-[3/4] bg-surface-container-lowest relative overflow-hidden">
+              <img src="assets/images/menu/menu-2.svg" data-fallback="assets/images/menu/menu-2.jpg" alt="FIVE SLASH menu - page 2, iced and seasonal" class="w-full h-full object-contain p-2 gallery-img" loading="lazy" onerror="if(this.dataset.fallback && !this.dataset.tried){this.dataset.tried='1'; this.src=this.dataset.fallback;}" />
+              <span class="absolute bottom-3 left-3 bg-background border border-on-background px-3 py-1 font-mono-label text-mono-label pointer-events-none">PAGE 02</span>
+            </div>
+            <figcaption class="px-4 py-3 border-t border-on-background/10 bg-background flex items-center justify-between">
+              <span class="font-label-caps text-label-caps text-secondary">ICED & SEASONAL</span>
+              <span class="font-mono-label text-mono-label text-secondary">Tap to zoom</span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="font-body-md text-body-md text-secondary text-center mt-4">Replace the SVGs in <code class="bg-surface-container px-1.5 py-0.5 rounded font-mono-label">public/assets/images/menu/</code> with your JPGs.</p>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="index.html" class="w-full bg-on-background text-background font-label-caps text-label-caps py-4 px-6 text-center hover:bg-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary inline-flex items-center justify-center gap-2 btn-interactive">
+            <span class="material-symbols-outlined text-[16px]">arrow_back</span> Back to Home
+          </a>
+          <a href="index.html#locations" class="w-full border border-on-background text-on-background font-label-caps text-label-caps py-4 px-6 text-center hover:bg-on-background hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary inline-flex items-center justify-center gap-2 btn-interactive">
+            Find a Branch <span class="material-symbols-outlined text-[16px]">location_on</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full mt-section-gap border-t border-on-background bg-background text-primary">
+    <div class="flex flex-col items-center gap-gutter px-container-padding py-20 max-w-7xl mx-auto w-full">
+      <h2 class="font-display-lg text-headline-lg text-on-background mb-4 text-center uppercase">FIVE SLASH</h2>
+      <nav class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
+        <a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Privacy Policy</a>
+        <a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Terms of Service</a>
+        <a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Wholesale</a>
+        <a class="font-label-caps text-label-caps text-secondary hover:text-primary underline transition-all duration-200" href="#">Careers</a>
+      </nav>
+      <p class="font-label-caps md:font-mono-label text-label-caps md:text-mono-label text-secondary text-center uppercase md:normal-case">© 2024 FIVE SLASH. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <!-- Menu lightbox - tap any page to enlarge, Esc or backdrop to close -->
+  <div id="menu-lightbox" class="fixed inset-0 z-[80] hidden bg-background/95 backdrop-blur-sm p-4 md:p-8 flex items-center justify-center" role="dialog" aria-modal="true" aria-label="Menu preview" aria-hidden="true">
+    <button id="lightbox-close" class="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center bg-background border border-on-background/10 hover:border-primary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Close preview">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <img id="lightbox-img" class="max-w-full max-h-[90vh] object-contain border border-on-background/10 bg-white" alt="" />
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
