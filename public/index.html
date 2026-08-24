@@ -3,328 +3,493 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>FIVE SLASH | Premium Coffee House</title>
+  <title>FIVE SLASH | Premium Coffee House — El Mansoura</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600&family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <script src="assets/js/tailwind-config.js"></script>
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><style>.reveal,.reveal--clip,.reveal--scale,.reveal--line,.gallery-item,.img-reveal,.hero-media,.hero-title,.hero-copy,.hero-actions,.hero-image,.hero-slash{opacity:1 !important;transform:none !important;clip-path:none !important;animation:none !important;}</style></noscript>
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary overflow-x-hidden">
-  <!-- TopAppBar -->
-  <header id="site-header" class="fixed top-0 w-full z-50 bg-background border-b border-on-background/10 flex justify-between items-center px-margin-mobile md:px-container-padding py-4 md:py-6 h-16 md:h-auto">
-    <button class="text-on-background cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center -ml-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
-      <span class="material-symbols-outlined text-primary text-[24px] md:text-[32px]" style="font-variation-settings: 'FILL' 0;">menu</span>
-    </button>
-    <a href="index.html" aria-label="Go to homepage" class="font-display-lg text-headline-md tracking-tighter text-on-background leading-none hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm px-2 py-2 min-h-[44px] flex items-center">FIVE SLASH</a>
-    <a href="menu.html" aria-label="View menu" class="text-on-background hover:text-primary transition-colors min-h-[44px] flex items-center justify-center gap-1.5 -mr-2 px-2 md:px-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm">
-      <span class="material-symbols-outlined text-primary text-[24px] md:text-[26px]">restaurant_menu</span>
-      <span class="hidden md:inline font-label-caps text-label-caps">Menu</span>
+  <!-- TopAppBar — editorial, retains JS hooks -->
+  <header id="site-header" class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-[8px] border-b border-on-background/10 flex justify-between items-center px-margin-mobile md:px-container-padding lg:pl-[72px] py-3.5 md:py-4 h-14 md:h-[64px]">
+    <div class="flex items-center gap-3 md:gap-5">
+      <button class="text-on-background cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center -ml-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span class="material-symbols-outlined text-primary text-[22px] md:text-[26px]" style="font-variation-settings: 'FILL' 0;">menu</span>
+      </button>
+      <a href="index.html" aria-label="Go to homepage" class="hidden md:inline-flex items-center gap-2 font-label-caps text-[11px] tracking-[0.18em] opacity-60 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-1 py-1">
+        <span class="w-6 h-px bg-primary"></span> INDEX — 01
+      </a>
+    </div>
+    <a href="index.html" aria-label="Go to homepage" class="absolute left-1/2 -translate-x-1/2 flex items-center gap-[1px] font-display-lg text-[18px] md:text-[22px] tracking-[-0.04em] leading-none hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm px-3 py-2">
+      <span class="font-[800]">FIVE</span><span class="font-[800] text-primary ml-[2px]">/</span><span class="font-[700] opacity-40 ml-1 hidden md:inline text-[14px] tracking-[0.12em]">SLASH</span>
     </a>
+    <div class="flex items-center gap-1">
+      <span class="hidden lg:inline-flex items-center gap-2 font-mono-label text-[11px] tracking-[0.08em] opacity-40 mr-3">29J4+FFJ — EL MANSOURA</span>
+      <a href="menu.html" aria-label="View menu" class="hidden md:inline-flex items-center gap-2 border border-on-background/15 hover:border-on-background hover:bg-on-background hover:text-background transition-colors px-4 py-2 font-label-caps text-[11px] tracking-[0.14em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm btn-interactive">
+        CHECK THE MENU
+      </a>
+      <a href="menu.html" aria-label="View menu" class="md:hidden min-h-[44px] min-w-[44px] flex items-center justify-center -mr-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">
+        <span class="material-symbols-outlined text-primary text-[22px]">restaurant_menu</span>
+      </a>
+    </div>
   </header>
-  <!-- NavigationDrawer -->
-  <nav class="fixed inset-0 z-[60] w-full h-full bg-background hidden flex-col p-margin-mobile md:p-container-padding overflow-y-auto" id="nav-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
-    <button class="absolute top-4 right-4 cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" id="close-drawer" aria-label="Close menu">
-      <span class="material-symbols-outlined text-primary text-[32px]" data-icon="close">close</span>
+
+  <!-- NavigationDrawer — editorial fullscreen -->
+  <nav class="fixed inset-0 z-[60] w-full h-full bg-background hidden flex-col overflow-hidden" id="nav-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <!-- faint 5/ watermark -->
+    <div class="absolute -right-[8%] top-[12%] font-display-xl font-[800] leading-none tracking-[-0.06em] text-[76vw] md:text-[38vw] opacity-[0.03] select-none pointer-events-none" aria-hidden="true"><span class="text-secondary">5</span><span class="text-primary skew-x-[-10deg] inline-block">/</span></div>
+    <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background: repeating-linear-gradient( -12deg, transparent 0 18px, #1b1c1c 18px 19px);"></div>
+    <button class="absolute top-3 right-3 md:top-5 md:right-6 cursor-pointer active:scale-95 transition-transform hover:opacity-70 duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm z-10" id="close-drawer" aria-label="Close menu">
+      <span class="material-symbols-outlined text-primary text-[28px]" data-icon="close">close</span>
     </button>
-    <div class="flex flex-col justify-center w-full h-full">
-      <a href="index.html" id="drawer-title" class="font-display-lg text-headline-lg tracking-tighter text-primary mb-12 inline-block hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">FIVE SLASH</a>
-      <ul class="flex flex-col gap-1 w-full">
-        <li><a class="font-display-lg text-headline-lg uppercase text-primary italic flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html" aria-current="page"><span class="w-4 h-px bg-primary"></span><span class="material-symbols-outlined">home</span>Home</a></li>
-        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="menu.html"><span class="material-symbols-outlined">local_cafe</span>Menu</a></li>
-        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html#manifesto"><span class="material-symbols-outlined">menu_book</span>Manifesto</a></li>
-        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html#locations"><span class="material-symbols-outlined">location_on</span>Locations</a></li>
-        <li><a class="font-display-lg text-headline-lg uppercase hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#"><span class="material-symbols-outlined">auto_stories</span>Journal</a></li>
-      </ul>
+    <div class="relative z-10 flex flex-col justify-between w-full h-full px-margin-mobile md:px-container-padding lg:pl-[72px] py-10 md:py-12">
+      <a href="index.html" id="drawer-title" class="font-display-lg text-[22px] md:text-[28px] tracking-[-0.04em] leading-none inline-flex items-baseline gap-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm w-fit"><span class="font-[800]">FIVE</span><span class="text-primary font-[800]">/</span><span class="font-[700] opacity-40 ml-1 text-[12px] tracking-[0.12em]">SLASH</span></a>
+      <div class="flex flex-col gap-8 md:gap-10 mt-8 md:mt-4 flex-1 justify-center">
+        <ul class="flex flex-col gap-1 md:gap-2 w-full max-w-[720px]">
+          <li><a class="group font-display-lg font-[800] tracking-[-0.03em] leading-none uppercase text-[44px] md:text-[72px] lg:text-[84px] text-primary italic flex items-center gap-4 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="index.html" aria-current="page"><span class="w-8 md:w-12 h-[3px] bg-primary hidden md:block"></span><span class="material-symbols-outlined text-[28px] md:text-[32px] opacity-60 group-hover:opacity-100 transition-opacity hidden md:inline">home</span> Home</a></li>
+          <li><a class="group font-display-lg font-[800] tracking-[-0.03em] leading-none uppercase text-[44px] md:text-[72px] lg:text-[84px] hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="menu.html"><span class="material-symbols-outlined text-[28px] md:text-[32px] opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">local_cafe</span> Menu <span class="hidden md:inline font-label-caps text-[12px] tracking-[0.16em] opacity-40 ml-3 translate-y-1">— 02 PAGES</span></a></li>
+          <li><a class="group font-display-lg font-[800] tracking-[-0.03em] leading-none uppercase text-[44px] md:text-[72px] lg:text-[84px] hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#manifesto"><span class="material-symbols-outlined text-[28px] md:text-[32px] opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">menu_book</span> Manifesto</a></li>
+          <li><a class="group font-display-lg font-[800] tracking-[-0.03em] leading-none uppercase text-[44px] md:text-[72px] lg:text-[84px] hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#locations"><span class="material-symbols-outlined text-[28px] md:text-[32px] opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">location_on</span> Location</a></li>
+          <li><a class="group font-display-lg font-[800] tracking-[-0.03em] leading-none uppercase text-[44px] md:text-[72px] lg:text-[84px] hover:text-primary transition-colors duration-300 text-on-background flex items-center gap-4 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm" href="#gallery"><span class="material-symbols-outlined text-[28px] md:text-[32px] opacity-40 group-hover:opacity-100 transition-opacity hidden md:inline">wall_art</span> Gallery</a></li>
+        </ul>
+        <div class="flex flex-wrap gap-3 md:gap-4 pt-4 border-t border-on-background/10 max-w-[720px]">
+          <div class="flex items-center gap-3 font-mono-label text-[11px] tracking-[0.08em] opacity-60">
+            <span class="w-6 h-px bg-primary"></span> EL MANSOURA — ONE LOCATION
+          </div>
+          <span class="hidden md:inline font-mono-label text-[11px] opacity-30">/ — DAKAHLIA 7650101 — OPEN TILL 2AM</span>
+        </div>
+      </div>
+      <div class="flex justify-between items-end gap-6 pt-6 border-t border-on-background/10">
+        <div class="font-mono-label text-[11px] leading-[1.6] opacity-50">29J4+FFJ, Gehan Al Sadat<br/>Mit Badr Khamees — El Mansoura</div>
+        <div class="hidden md:flex items-center gap-2 font-label-caps text-[11px] tracking-[0.14em]"><span class="w-6 h-px bg-on-background/20"></span> EST 2024</div>
+      </div>
     </div>
   </nav>
-  <main class="pt-16 md:pt-[100px]">
 
-    <!-- HERO (Mobile) -->
-    <section class="relative w-full min-h-[80vh] flex flex-col justify-end px-margin-mobile pb-12 mb-section-gap md:hidden">
-      <div class="absolute inset-0 z-[-1] bg-cover bg-center hero-media"
-        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAro5W9TiZhnIxlgCOPw0-VGU6ASWha-FITgd8LoSRoD4Df7yT3z8cpGrrmfosr5eCrXk13SLeNAC8i_PicPAdqcUUJqJb_F61On0zFq_iJtVBT-XOsJg9nJs6USY4cS4dcpaK2Jza4mLSHCVO7fIKWuvCWW--ZC0K8urhjcF_WNY2OHY1qnM-niPRvEFnAi539QOGi4sp7DRDXBc5b8HzOUmw0GW-KsosbFLi1E4n8mfGxam5jilT-')"></div>
-      <div class="relative z-10 w-full flex flex-col gap-6">
-        <h1 class="font-display-xl text-display-xl uppercase text-background w-full mix-blend-difference break-words hero-title">
-          TAKE FIVE<br/>/ SIP LIFE
-        </h1>
-        <div class="flex flex-row gap-4 w-full hero-actions">
-          <a href="menu.html" class="flex-1 bg-on-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-primary transition-colors duration-300 text-center uppercase btn-interactive">Check the Menu</a>
-          <a href="#gallery" class="anchor-link flex-1 border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase btn-interactive">Explore</a>
-        </div>
+  <main class="pt-14 md:pt-[64px]">
+    <!-- ================= HERO — CINEMATIC EDITORIAL (background image layer) ================= -->
+    <section class="relative bg-background overflow-hidden border-b border-on-background/10 min-h-[620px] md:min-h-[68vh] lg:min-h-[76vh] flex flex-col">
+      <!-- vertical rail -->
+      <div class="hidden lg:flex absolute left-0 top-0 bottom-0 w-[56px] border-r border-on-background/10 flex-col items-center justify-between py-6 z-20 bg-background/60 backdrop-blur-[2px]">
+        <span class="font-label-caps text-[10px] tracking-[0.22em] whitespace-nowrap rotate-[-90deg] translate-y-6 opacity-40">FIVE SLASH — EL MANSOURA</span>
+        <span class="font-mono-label text-[11px] tracking-[0.08em] opacity-30 rotate-[-90deg] mb-8">EST 2024</span>
       </div>
-    </section>
+      <!-- watermark 5/ -->
+      <div class="absolute inset-0 pointer-events-none select-none overflow-hidden z-[1]" aria-hidden="true">
+        <span class="absolute -top-[6%] right-[-6%] md:right-[-2%] font-display-xl font-[800] leading-none tracking-[-0.06em] text-[76vw] md:text-[46vw] lg:text-[38vw] opacity-[0.035] hidden md:block"><span class="text-secondary">5</span><span class="text-primary skew-x-[-12deg] inline-block">/</span></span>
+      </div>
+      <!-- ===== Premium background visual — RIGHT side, subtle white gradient transition ===== -->
+      <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+        <!-- image layer: full bleed behind content on mobile, right-half on desktop -->
+        <div class="absolute inset-0 md:inset-y-0 md:right-0 md:left-auto md:w-[57%] lg:w-[54%] xl:w-[51%] overflow-hidden">
+          <img class="w-full h-full object-cover object-[60%_44%] md:object-[48%_center] scale-[0.98] md:scale-[1.01] hero-media" alt="Premium iced coffee in geometric glass — high-fashion minimal photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAIahfNXv_tEyJDN-oRs-S6AywChXRNA3i_ckJTaBrcmbT-7PRzi-zgIBAqYzf9N7_e_n-YgCsOx8iZGLy67ZJATFQYMslQmMYfpfIuFmWPK-qLpKjbQCaDfCoKN2231K2jqdoJIlpoJP-BiAs-fL7G05PyFZiPXmdPHEVflTtk2Tl_X06g2_QeLmxqcEl0JtZO3sQi4tyDpLtDbrbUaGE_IDXLKZcAsKEiHlCsyjou7kEd1mn6AH"/>
+          <!-- very subtle warm glaze to keep premium feel, no darkening -->
+          <div class="absolute inset-0 opacity-[0.04]" style="background: linear-gradient(112deg, transparent 68%, rgba(173,44,0,0.09) 72%, transparent 75%);"></div>
+        </div>
+        <!-- seamless white gradient between text area and image -->
+        <!-- mobile: soft veil only behind left text block, right side (cup) stays crisp -->
+        <div class="absolute inset-0 md:hidden" style="background: linear-gradient(90deg, #faf9f9 0%, #faf9f9 36%, rgba(250,249,249,0.92) 48%, rgba(250,249,249,0.58) 60%, rgba(250,249,249,0.18) 70%, transparent 80%);"></div>
+        <!-- tablet/desktop: left fade only over image edge -->
+        <div class="hidden md:block absolute inset-y-0 right-0 w-[57%] lg:w-[54%] xl:w-[51%] pointer-events-none" style="background: linear-gradient(90deg, #faf9f9 0%, #faf9f9 6%, rgba(250,249,249,0.96) 14%, rgba(250,249,249,0.78) 26%, rgba(250,249,249,0.38) 42%, rgba(250,249,249,0.0) 58%);"></div>
+        <!-- extra top softness for mobile so header doesn't clash -->
+        <div class="absolute inset-0 md:hidden pointer-events-none" style="background: linear-gradient(180deg, rgba(250,249,249,0.18) 0%, transparent 16%);"></div>
+      </div>
 
-    <!-- HERO (Desktop) -->
-    <section class="relative min-h-[90vh] hidden md:flex items-center px-container-padding overflow-hidden mb-section-gap">
-      <div class="absolute inset-0 slash-pattern z-0 opacity-50 pointer-events-none"></div>
-      <div class="relative z-10 grid grid-cols-12 gap-gutter w-full max-w-[1600px] mx-auto items-center">
-        <div class="col-span-12 md:col-span-7 flex flex-col justify-center mix-blend-difference relative z-20">
-          <h1 class="font-display-xl text-[56px] lg:text-[80px] xl:text-display-xl leading-[0.85] tracking-tighter uppercase whitespace-nowrap text-surface-lowest hero-title">
-            TAKE FIVE <br/> <span class="text-primary-fixed">/</span> SIP LIFE
-          </h1>
-          <p class="font-body-lg text-body-lg text-surface-lowest mt-12 max-w-md hero-copy">
-            A clinical yet vibrant approach to specialty coffee. Precision brewing meets high-fashion aesthetic in every pour.
-          </p>
-          <div class="mt-12 flex flex-wrap gap-4 hero-actions">
-            <a href="menu.html" class="inline-block bg-on-background text-background px-8 py-4 font-mono-label text-mono-label uppercase tracking-widest hover:bg-primary transition-colors duration-300 btn-interactive">Check the Menu</a>
-            <a href="#gallery" class="anchor-link inline-block border border-on-background text-on-background px-8 py-4 font-mono-label text-mono-label uppercase tracking-widest hover:bg-on-background hover:text-background transition-colors duration-300 btn-interactive">Explore</a>
+      <div class="relative z-10 w-full max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px] flex-1 flex flex-col">
+        <!-- top meta bar -->
+        <div class="flex justify-between items-center gap-4 pt-6 md:pt-8 pb-4 md:pb-6 border-b border-on-background/10 hero-meta">
+          <div class="flex items-center gap-2 md:gap-3">
+            <span class="w-5 md:w-8 h-[1.5px] bg-primary"></span>
+            <span class="font-label-caps text-[10px] md:text-label-caps tracking-[0.18em]">SPECIALTY COFFEE HOUSE</span>
+            <span class="hidden md:inline font-mono-label text-[11px] opacity-40 ml-2">/ ED. 01</span>
+          </div>
+          <span class="font-mono-label text-[10px] md:text-[11px] tracking-[0.08em] opacity-40 hidden md:inline">29J4+FFJ — MIT BADR KHAMEES</span>
+          <span class="font-mono-label text-[10px] tracking-[0.08em] opacity-40 md:hidden">EL MANSOURA</span>
+        </div>
+
+        <div class="grid grid-cols-12 gap-4 md:gap-gutter pt-6 md:pt-10 pb-8 md:pb-12 items-start">
+          <!-- headline — LEFT side clean -->
+          <div class="col-span-12 lg:col-span-7 flex flex-col relative">
+            <h1 class="hero-title font-display-xl font-[800] tracking-[-0.05em] leading-[0.815] uppercase">
+              <span class="block text-[19vw] md:text-[10.5vw] lg:text-[96px] xl:text-[114px]">TAKE</span>
+              <span class="block text-[19vw] md:text-[10.5vw] lg:text-[96px] xl:text-[114px] flex items-baseline gap-1">
+                FIVE<span class="inline-flex items-baseline ml-[0.04em]"><span class="text-secondary/30 font-[800]">5</span><span class="text-primary slash-skew -ml-[0.03em]">/</span></span>
+              </span>
+              <span class="block text-[19vw] md:text-[10.5vw] lg:text-[96px] xl:text-[114px] font-[700] tracking-[-0.04em]">SIP LIFE</span>
+            </h1>
+            <div class="hero-copy mt-6 md:mt-8 max-w-[46ch]">
+              <p class="font-body-lg text-[16px] md:text-[18px] leading-[1.55] text-secondary">
+                A clinical yet vibrant approach to specialty coffee. Precision brewing meets high-fashion restraint — poured in El Mansoura.
+              </p>
+              <div class="hidden md:flex items-center gap-3 mt-5">
+                <span class="w-10 h-px bg-on-background/15"></span>
+                <span class="font-mono-label text-[11px] tracking-[0.08em] opacity-50">SINGLE LOCATION — SINGLE FOCUS</span>
+              </div>
+            </div>
+            <div class="hero-actions flex flex-wrap gap-3 mt-7 md:mt-8">
+              <a href="menu.html" class="inline-flex items-center gap-2 bg-on-background text-background px-6 md:px-8 py-[14px] md:py-[15px] font-label-caps text-[12px] tracking-[0.14em] hover:bg-primary transition-colors btn-interactive">
+                CHECK THE MENU <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+              <a href="#gallery" class="anchor-link inline-flex items-center gap-2 border border-on-background px-6 md:px-8 py-[13px] md:py-[14px] font-label-caps text-[12px] tracking-[0.14em] hover:bg-on-background hover:text-background transition-colors btn-interactive">
+                EXPLORE <span class="text-primary">/</span> GALLERY
+              </a>
+            </div>
+            <div class="hidden md:flex items-center gap-3 mt-10 font-mono-label text-[11px] tracking-[0.08em] opacity-40">
+              <span class="w-6 h-px bg-on-background/25"></span> SCROLL — MANIFESTO BELOW
+            </div>
+          </div>
+          <!-- spacer — keeps background image on right from covering text; no separate image block -->
+          <div class="col-span-12 lg:col-span-5 relative hidden lg:block pointer-events-none" aria-hidden="true">
+            <!-- premium overlaid badges integrated with background visual -->
+            <div class="relative w-full h-[62vh] min-h-[520px] max-h-[680px]">
+              <div class="absolute top-4 right-4 lg:right-2 bg-background border border-on-background px-2.5 md:px-3 py-1 md:py-1.5 font-label-caps text-[10px] tracking-[0.14em] flex items-center gap-2 shadow-[0_2px_12px_rgba(27,28,28,0.06)]">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span> VOL. 01 — THE POUR
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 h-[1px] bg-primary/12 hidden lg:block"></div>
+              <div class="absolute -bottom-5 -left-5 w-[72px] h-[72px] bg-primary text-background hidden lg:flex items-center justify-center font-display-xl text-[44px] leading-none skew-x-[-8deg] shadow-[0_8px_24px_rgba(173,44,0,0.22)]">/</div>
+              <div class="absolute -top-3 -right-3 w-24 h-24 border border-on-background/10 bg-background/80 backdrop-blur-sm p-3 hidden xl:flex flex-col justify-center">
+                <p class="font-label-caps text-[10px] tracking-[0.12em] leading-[1.3] opacity-60">PRECISION<br/>IN EVERY<br/><span class="text-primary">DROP — 5/</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- mobile/tablet badge row — not an image block, just overlay captions -->
+          <div class="col-span-12 flex lg:hidden justify-between items-center mt-2 font-mono-label text-[11px] tracking-[0.06em] opacity-60">
+            <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse md:hidden"></span> GEHAN AL SADAT — EL MANSOURA</span><span class="text-primary">/</span>
           </div>
         </div>
-        <div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0 z-10">
-          <div class="relative w-full aspect-[3/4] overflow-hidden border border-on-background/20 bg-surface-container hero-image">
-            <img class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700 ease-out"
-              alt="High-fashion, minimalist photography of a premium iced coffee drink in a geometric glass."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAIahfNXv_tEyJDN-oRs-S6AywChXRNA3i_ckJTaBrcmbT-7PRzi-zgIBAqYzf9N7_e_n-YgCsOx8iZGLy67ZJATFQYMslQmMYfpfIuFmWPK-qLpKjbQCaDfCoKN2231K2jqdoJIlpoJP-BiAs-fL7G05PyFZiPXmdPHEVflTtk2Tl_X06g2_QeLmxqcEl0JtZO3sQi4tyDpLtDbrbUaGE_IDXLKZcAsKEiHlCsyjou7kEd1mn6AH"/>
+
+        <div class="hidden md:flex justify-between items-center py-4 border-t border-on-background/10 font-mono-label text-[11px] tracking-[0.06em]">
+          <div class="flex gap-6 md:gap-8">
+            <span><span class="opacity-40">OPEN</span> — Closes 2 AM</span>
+            <span><span class="opacity-40">PRICE</span> — E£1–200</span>
+            <span class="hidden lg:inline"><span class="opacity-40">SERVICE</span> — Specialty + Seasonal</span>
           </div>
-          <div class="absolute -top-1/4 -right-1/4 w-[150%] h-[150%] bg-primary mix-blend-multiply opacity-20 pointer-events-none rotate-45 transform origin-center hero-slash"></div>
+          <a href="#manifesto" class="anchor-link inline-flex items-center gap-2 hover:text-primary transition-colors"><span class="w-5 h-px bg-current"></span> MANIFESTO 01</a>
         </div>
       </div>
     </section>
 
-    <!-- MANIFESTO (Mobile) -->
-    <section id="manifesto" class="px-margin-mobile mb-section-gap w-full scroll-mt-24 md:hidden">
-      <h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase w-[90%] reveal">
-        WE DON'T JUST MAKE COFFEE.<br/>WE MAKE MOMENTS.
-      </h2>
-      <div class="w-16 h-2 bg-primary mt-8 transform -skew-x-12 reveal" style="transition-delay: 120ms"></div>
+    <!-- ================= MANIFESTO — EDITORIAL ================= -->
+    <section id="manifesto" class="relative bg-inverse-surface text-background overflow-hidden scroll-mt-[64px]">
+      <div class="absolute inset-0 opacity-[0.035] slash-pattern pointer-events-none"></div>
+      <div class="absolute top-1/2 left-1/2 w-[130%] h-[1px] bg-primary/25 rotate-[-11deg] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block"></div>
+      <div class="absolute top-0 left-0 w-full h-[3px] bg-primary hidden md:block" style="clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);"></div>
+      <div class="relative max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px] py-14 md:py-24 lg:py-32">
+        <div class="grid grid-cols-12 gap-6 md:gap-gutter items-start">
+          <div class="col-span-12 md:col-span-3 lg:col-span-2">
+            <span class="font-label-caps text-[11px] tracking-[0.22em] text-primary-fixed block reveal">THE MANIFESTO — 01</span>
+            <div class="w-10 h-[2px] bg-primary mt-3 hidden md:block reveal" style="transition-delay:60ms"></div>
+            <p class="font-mono-label text-[11px] tracking-[0.08em] opacity-50 mt-4 hidden md:block reveal" style="transition-delay:90ms">CLINICAL<br/>VIBRANT<br/>PRECISE</p>
+          </div>
+          <div class="col-span-12 md:col-span-6 lg:col-span-7">
+            <h2 class="font-display-xl font-[800] tracking-[-0.03em] leading-[0.88] uppercase text-[36px] md:text-[54px] lg:text-[68px] xl:text-[76px] reveal">
+              WE DON'T<br/>
+              JUST MAKE<br/>
+              <span class="inline-flex items-baseline gap-2">COFFEE<span class="text-primary-fixed">.</span></span><br/>
+              WE MAKE<br/>
+              <span class="text-primary-fixed italic font-[700]">MOMENTS</span><span class="text-primary">/</span>
+            </h2>
+            <div class="mt-6 md:mt-8 flex items-center gap-3 reveal" style="transition-delay:120ms">
+              <span class="w-12 h-[1.5px] bg-primary"></span>
+              <span class="font-mono-label text-[11px] tracking-[0.12em] opacity-60">STRIPPED TO ESSENTIALS — THEN RECONSTRUCTED</span>
+            </div>
+          </div>
+          <div class="col-span-12 md:col-span-3 lg:col-span-3 md:pt-2">
+            <p class="font-body-md text-[16px] leading-[1.7] opacity-70 max-w-[32ch] reveal" style="transition-delay:160ms">A gallery-like ritual. Heavy whitespace, sharp type, zero clutter. Coffee stripped to its essentials — then reconstructed with fashion-house precision.</p>
+            <div class="w-px h-20 bg-primary rotate-[18deg] origin-top mt-8 hidden md:block reveal--line" style="transition-delay:220ms"></div>
+            <div class="mt-6 hidden md:flex items-center gap-2 font-label-caps text-[10px] tracking-[0.14em] opacity-40 reveal" style="transition-delay:260ms"><span class="w-4 h-px bg-primary"></span> 5<span class="text-primary">/</span> ATELIER</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-[1px] bg-background/10"></div>
+      <div class="h-3 w-full flex overflow-hidden">
+        <div class="w-[18%] bg-primary skew-x-[-12deg] -ml-2"></div>
+        <div class="flex-1"></div>
+        <div class="hidden md:block w-[12%] border-y border-background/10"></div>
+      </div>
     </section>
 
-    <!-- MANIFESTO (Desktop) -->
-    <section class="min-h-screen hidden md:flex flex-col justify-center items-center px-container-padding bg-inverse-surface text-background relative overflow-hidden mb-section-gap">
-      <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-        <div class="w-full h-full slash-primary opacity-30"></div>
-      </div>
-      <div class="max-w-5xl mx-auto text-center relative z-10">
-        <span class="font-label-caps text-label-caps tracking-[0.2em] text-primary-fixed block mb-8 reveal" style="transition-delay: 0ms">THE MANIFESTO</span>
-        <h2 class="font-headline-lg text-headline-lg md:text-[80px] leading-[1.1] tracking-tight uppercase reveal" style="transition-delay: 80ms">
-          WE DON'T JUST MAKE COFFEE.<br/>
-          WE MAKE <span class="text-primary-fixed italic pr-2">MOMENTS.</span>
-        </h2>
-        <div class="w-px h-32 bg-primary mx-auto mt-16 rotate-45 reveal--line" style="transition-delay: 220ms"></div>
-      </div>
-    </section>
-    <!-- VISIT US / Location -->
-    <section class="px-margin-mobile mb-section-gap w-full reveal">
-      <div class="max-w-2xl mx-auto bg-background border-t border-on-background/10 border-b border-on-background/10 py-12" id="locations">
-        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
-          <div class="w-full md:w-1/3 text-center md:text-left">
-            <h2 class="font-display-lg text-headline-lg-mobile text-background uppercase mb-4">Five/Cafe</h2>
-            <p class="font-mono-label text-mono-label text-secondary mb-2">Coffee Shop</p>
-            <address class="font-body-md text-body-md text-surface-lowest mb-6 line-break-normal">
+    <!-- ================= LOCATION — ONE ONLY ================= -->
+    <section id="locations" class="relative bg-background scroll-mt-[64px] py-12 md:py-20 lg:py-28 border-b border-on-background/10 overflow-hidden">
+      <div class="absolute top-6 right-6 md:right-[5%] font-display-xl font-[800] text-[88px] md:text-[160px] leading-none tracking-[-0.05em] opacity-[0.035] select-none pointer-events-none" aria-hidden="true"><span class="text-secondary">5</span><span class="text-primary skew-x-[-10deg] inline-block">/</span></div>
+      <div class="max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px]">
+        <div class="flex flex-wrap items-center gap-3 mb-8 md:mb-12 reveal">
+          <span class="w-8 md:w-10 h-[1.5px] bg-primary"></span>
+          <span class="font-label-caps text-[11px] tracking-[0.18em]">VISIT — ONE LOCATION ONLY</span>
+          <span class="hidden md:block flex-1 h-px bg-on-background/10 ml-4"></span>
+          <span class="hidden md:inline font-mono-label text-[11px] tracking-[0.08em] opacity-40">EL MANSOURA — DAKAHLIA</span>
+          <span class="md:hidden font-mono-label text-[11px] opacity-40 ml-auto">01 — ONLY</span>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6 md:gap-8 lg:gap-gutter items-start">
+          <div class="col-span-12 lg:col-span-7">
+            <div class="reveal">
+              <span class="font-label-caps text-[11px] tracking-[0.16em] opacity-40">Five<span class="text-on-background/30">/</span>Cafe — COFFEE SHOP</span>
+              <h2 class="font-display-xl font-[800] tracking-[-0.04em] leading-[0.85] uppercase text-[44px] md:text-[62px] lg:text-[78px] mt-2">
+                GEHAN<br/>
+                AL SADAT<span class="text-primary">/</span>
+              </h2>
+            </div>
+            <address class="not-italic font-body-lg text-[16px] md:text-[18px] leading-[1.6] mt-5 md:mt-6 max-w-[36ch] text-secondary reveal" style="transition-delay:80ms">
               29J4+FFJ, Gehan Al Sadat,<br/>
               Mit Badr Khamees, El Mansoura 1,<br/>
               Dakahlia Governorate 7650101
             </address>
+            <div class="flex flex-wrap gap-3 mt-6 md:mt-8 reveal" style="transition-delay:110ms">
+              <a href="https://www.google.com/maps/search/?api=1&query=29J4%2BFFJ%2C%20Gehan%20Al%20Sadat%2C%20Mit%20Badr%20Khamees%2C%20El%20Mansoura%2C%20Dakahlia%20Governorate%207650101" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary text-background px-7 md:px-8 py-3.5 md:py-4 font-label-caps text-[12px] tracking-[0.12em] hover:bg-on-background transition-colors btn-interactive">
+                GET DIRECTIONS <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+              </a>
+              <span class="hidden md:inline-flex items-center font-mono-label text-[11px] opacity-40 px-2">Opens in Maps — new tab</span>
+            </div>
+            <div class="mt-6 flex items-center gap-3 font-mono-label text-[11px] tracking-[0.08em] opacity-30 md:hidden reveal" style="transition-delay:130ms"><span class="w-6 h-px bg-on-background/20"></span> SINGLE ORIGIN FOCUS</div>
           </div>
-          <div class="w-full md:w-2/3 bg-surface-container-lowest rounded-lg p-8 md:p-10">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="font-xl text-primary">🕐</span>
-              <div>
-                <p class="font-semibold text-on-background">Opening Hours</p>
-                <p class="font-mono-label text-mono-label text-on-background/60">Open · Closes 2 AM</p>
+
+          <div class="col-span-12 lg:col-span-5 flex flex-col border border-on-background/10 divide-y divide-on-background/10 overflow-hidden bg-surface-container-lowest reveal" style="transition-delay:140ms">
+            <div class="grid grid-cols-2 divide-x divide-on-background/10">
+              <div class="p-5 md:p-7">
+                <div class="flex items-center gap-2 mb-3"><span class="w-5 h-[1.5px] bg-primary"></span><span class="font-label-caps text-[11px] tracking-[0.12em] opacity-60">HOURS</span></div>
+                <p class="font-headline-md text-[22px] md:text-[26px] leading-none tracking-tight font-[700]">OPEN</p>
+                <p class="font-mono-label text-[11px] tracking-[0.04em] opacity-60 mt-2">Closes 2 AM — Daily</p>
+              </div>
+              <div class="p-5 md:p-7 bg-background">
+                <div class="flex items-center gap-2 mb-3"><span class="w-5 h-[1.5px] bg-primary"></span><span class="font-label-caps text-[11px] tracking-[0.12em] opacity-60">PRICE</span></div>
+                <p class="font-headline-md text-[22px] md:text-[26px] leading-none tracking-tight font-[700]">E£1–200</p>
+                <p class="font-mono-label text-[11px] tracking-[0.04em] opacity-60 mt-2">per person</p>
               </div>
             </div>
-            <div class="flex items-center gap-3 mb-4">
-              <span class="font-xl text-primary">💰</span>
+            <div class="p-5 md:p-7 flex items-center justify-between bg-inverse-surface text-background">
               <div>
-                <p class="font-semibold text-on-background">Price Range</p>
-                <p class="font-mono-label text-mono-label text-on-background/60">E£1–200 per person</p>
+                <p class="font-label-caps text-[10px] tracking-[0.14em] opacity-60">IDENTITY</p>
+                <p class="font-mono-label text-[13px] mt-1 opacity-90">Coffee Shop — Single Origin Focus</p>
+                <p class="font-mono-label text-[11px] opacity-50">No branches — this is the atelier.</p>
               </div>
+              <span class="font-display-xl text-[36px] md:text-[42px] leading-none tracking-tighter opacity-20 hidden md:block"><span class="text-background">5</span><span class="text-primary-fixed">/</span></span>
             </div>
-            <a href="https://www.google.com/maps/search/?api=1&query=29J4%2BFFJ%2C%20Gehan%20Al%20Sadat%2C%20Mit%20Badr%20Khamees%2C%20El%20Mansoura%2C%20Dakahlia%20Governorate%207650101" class="w-full bg-primary text-background font-mono-label text-mono-label py-3 px-6 rounded hover:bg-on-background transition-colors duration-300 text-center uppercase btn-interactive" target="_blank" rel="noopener noreferrer">
-              Get Directions
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /VISIT US / Location -->
-
-
-
-    <!-- SIGNATURES horizontal scroll (Mobile) -->
-    <section id="signatures" class="w-full mb-section-gap pl-margin-mobile scroll-mt-24 md:hidden">
-      <div class="flex items-center justify-between pr-margin-mobile mb-8 reveal">
-        <h3 class="font-headline-md text-headline-md uppercase">SIGNATURES</h3>
-        <span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">LIMITED</span>
-      </div>
-      <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar stagger" style="scrollbar-width: none; -ms-overflow-style: none;">
-        <div class="snap-start min-w-[280px] w-[85vw] max-w-[340px] border border-surface-container-highest flex flex-col relative bg-background shrink-0 reveal reveal--scale card-lift">
-          <div class="h-64 w-full border-b border-surface-container-highest bg-cover bg-center"
-            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBcSx67rkBxIFYgkIy4azbL78BLUnpmNz1KN7OEqcFQ8ubX34F9CCwGhB_ZGc0wE2kyvVUNhY7k7yOnXtYEiUeZbH7w_zZyB41qg4xpXRWYDHAnmQLlDRbvl9pYQoJ2CrKsZGTUv31zIEX_ykwut7IBbi9FbFh0uW_GiGX3eVPp8Ijv1ZUQ3wTGnMIqgQs1uTsPj1ooUGMVwKHccFtB8Db9nQVk2hSKaPcFmJ3YMmD3ezn7FQWATFAx')"></div>
-          <div class="p-6 flex flex-col gap-2 relative">
-            <div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">$5</div>
-            <h4 class="font-mono-label text-mono-label uppercase">Iced V60</h4>
-            <p class="font-body-md text-body-md text-secondary">Ethiopian Yirgacheffe, floral notes, crisp finish.</p>
-          </div>
-        </div>
-        <div class="snap-start min-w-[280px] w-[85vw] max-w-[340px] border border-surface-container-highest flex flex-col relative bg-background shrink-0 reveal reveal--scale card-lift">
-          <div class="h-64 w-full border-b border-surface-container-highest bg-cover bg-center"
-            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9qZlyGKcmfjIFJiAGC3IMyrvNWP48JB-rlGpZl0u4p--6gcghvoUL5SNqaM0kPUFMjTzqyfWpMLdmcLBPOPKXG_79MGzETuf5xuR8XEaHILi5HpxA_cB1rn0CHlyTVoDrzxrdNdn7aFeFwEtArfWFFbzytnuSuF68Lv5N5Bm_eTHpf3JjWAuUn7LIECPbRnmh9L6PQioBTipqr2rgtOUdbH8v9GQQpl87PtinAo-TXHWRySS9Iv0j')"></div>
-          <div class="p-6 flex flex-col gap-2 relative">
-            <div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">$6</div>
-            <h4 class="font-mono-label text-mono-label uppercase">Matcha Latte</h4>
-            <p class="font-body-md text-body-md text-secondary">Ceremonial grade Uji matcha, steamed oat milk.</p>
-          </div>
-        </div>
-        <div class="snap-start min-w-[280px] w-[85vw] max-w-[340px] border border-surface-container-highest flex flex-col relative bg-background shrink-0 reveal reveal--scale card-lift">
-          <div class="h-64 w-full border-b border-surface-container-highest bg-cover bg-center"
-            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9BqaM3z7bMF90S1YOt7WUFF-hGDUACCiDWdhf6G_byMtX8t1nbQ0uNGOYl_9uv9QYAQpe_55y7YInKbAcYmT3h0KyAhgrbGQDDlVntzpZpplgoDzy4UFEUivxgZVq5Otv9AXA_gQRNGgq9uw-J4vqVhnM_NF0UmlvZIQHtqbdYRsPQ4Nccu5kMHTvVDc2cFt83wFmtpuVPn8TlJKBp6pzwxMXiKqc4TgdMFsZSYhr52zsBQz_VOhC')"></div>
-          <div class="p-6 flex flex-col gap-2 relative">
-            <div class="absolute top-0 right-0 p-4 font-display-lg text-headline-md text-primary bg-background border-l border-b border-surface-container-highest transform translate-y-[-100%]">$5</div>
-            <h4 class="font-mono-label text-mono-label uppercase">Spanish Latte</h4>
-            <p class="font-body-md text-body-md text-secondary">Sweet condensed milk, double ristretto shot.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CURATED POURS grid (Desktop) -->
-    <section class="hidden md:block px-container-padding max-w-[1600px] mx-auto mb-section-gap">
-      <div class="flex justify-between items-end mb-16 border-b border-on-background pb-6 reveal">
-        <h2 class="font-headline-lg text-headline-lg uppercase">Curated Pours</h2>
-        <a class="font-mono-label text-mono-label hover:text-primary transition-colors flex items-center gap-2 link-arrow" href="menu.html">
-          FULL MENU <span class="material-symbols-outlined text-[16px] arrow-icon">arrow_forward</span>
-        </a>
-      </div>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-on-background/10 stagger">
-        <div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300 reveal card-lift">
-          <div class="flex justify-between items-start">
-            <span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">SIGNATURE</span>
-            <span class="font-display-lg text-headline-md tracking-tighter">01</span>
+    <!-- ================= MENU TEASER — FOUR PICKS — OUR SELECTION ================= -->
+    <section id="signatures" class="relative bg-background scroll-mt-[64px] py-12 md:py-20 lg:py-28 overflow-hidden border-b border-on-background/10">
+      <div class="max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px]">
+        <!-- header -->
+        <div class="reveal">
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-px bg-primary"></span>
+            <span class="font-label-caps text-[11px] tracking-[0.22em] opacity-60">MENU / 02</span>
           </div>
-          <div class="relative z-10">
-            <h3 class="font-headline-md text-headline-md mb-2">The Void</h3>
-            <p class="font-body-md text-body-md text-secondary mb-4">AeroPress extraction, activated charcoal, Madagascar vanilla.</p>
-            <span class="font-mono-label text-mono-label">$7.00</span>
-          </div>
-          <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none p-4">
-            <img class="w-full h-full object-cover object-center filter grayscale contrast-125" alt="Jet black coffee in a clear geometric tumbler on a white gallery wall."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEkjcXtycjJrM8jO4ZkS0rTOV0aHQLXv7dDt3JaqarYW4Y8gPV_Lkowj6ELxLPN-zjVvAnM14tbCtr6GeW2OhhjK8I_maFjrnwX3FOpJlv3a8zmedlNmkG17HsHebMx6eDXoOBbiRRYsa8vuDrLNpF96jHVYxMqAFQkuyGp8JDbJIRbLMb7H73q8une86hsfciu6vRTiWQoEuCeWDhRDi-3xuFWoGvkb-xHIFYwa5k7U1i3PggFRz0"/>
+          <div class="flex flex-wrap justify-between items-end gap-6 mt-4 pb-6 md:pb-8 border-b border-on-background">
+            <h2 class="font-display-xl font-[800] tracking-[-0.04em] leading-[0.92] uppercase">
+              <span class="block text-[34px] md:text-[48px] lg:text-[56px] leading-none">FOUR PICKS<span class="text-primary">/</span></span>
+              <span class="block font-display-xl font-[700] tracking-[-0.02em] text-[16px] md:text-[22px] lg:text-[26px] opacity-40 mt-2 md:mt-1 md:ml-1">OUR SELECTION</span>
+            </h2>
+            <span class="hidden md:inline-flex items-center gap-2 font-mono-label text-[11px] tracking-[0.08em] opacity-40 pb-1">
+              <span class="w-6 h-px bg-on-background/20"></span> EDITORIAL TEASER — 4 IMAGES
+            </span>
           </div>
         </div>
-        <div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300 reveal card-lift">
-          <div class="flex justify-between items-start">
-            <span class="font-label-caps text-label-caps bg-primary text-background px-3 py-1">POUR OVER</span>
-            <span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">02</span>
-          </div>
-          <div class="relative z-10">
-            <h3 class="font-headline-md text-headline-md mb-2">Neon Geisha</h3>
-            <p class="font-body-md text-body-md text-secondary mb-4">Panama Finca Deborah. Notes of jasmine, bergamot, raw honey.</p>
-            <span class="font-mono-label text-mono-label">$12.00</span>
-          </div>
-        </div>
-        <div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300 reveal card-lift">
-          <div class="flex justify-between items-start">
-            <span class="font-label-caps text-label-caps bg-on-background text-background px-3 py-1">ESPRESSO</span>
-            <span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">03</span>
-          </div>
-          <div class="relative z-10">
-            <h3 class="font-headline-md text-headline-md mb-2">Cortado / Red</h3>
-            <p class="font-body-md text-body-md text-secondary mb-4">Double ristretto, textured oat milk, dusting of cayenne.</p>
-            <span class="font-mono-label text-mono-label">$5.50</span>
-          </div>
-          <div class="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none p-4">
-            <img class="w-full h-full object-cover object-center filter grayscale contrast-125" alt="Cortado in a stark white ceramic cup with a red-orange streak across the foam."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6nrrxF7_vNmtS6tvjm92CQctJuO4Skmha8clkezPsETDIibBtrkRwz9JBScF2Xcsor2k7CY4goO_i0u8djqzWkqj65frIdnddE800XhjeuLIUsYkuiEtZ9rIoIipxCYvjd-pi_VrfP13a1e2vQAIjBoCRwOOdCQdhJHwRkmtqwYAihUvuSIniL6E125P2YrIe1Jil-ftwsahN00Vse6I3NynVB6LkkRWaD0LtYByzIHb7Ux3381-"/>
-          </div>
-        </div>
-        <div class="group relative border-r border-b border-on-background/10 p-8 h-[400px] flex flex-col justify-between hover:bg-surface-container transition-colors duration-300 reveal card-lift">
-          <div class="flex justify-between items-start">
-            <span class="font-label-caps text-label-caps border border-on-background px-3 py-1">COLD</span>
-            <span class="font-display-lg text-headline-md tracking-tighter text-on-background/30">04</span>
-          </div>
-          <div class="relative z-10">
-            <h3 class="font-headline-md text-headline-md mb-2">Kyoto Drip</h3>
-            <p class="font-body-md text-body-md text-secondary mb-4">12-hour slow drip over ice. Intense, syrupy, zero acidity.</p>
-            <span class="font-mono-label text-mono-label">$8.00</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
+        <!-- editorial 2x2 image grid -->
+        <div class="grid grid-cols-2 gap-3 md:gap-6 lg:gap-8 mt-8 md:mt-10 stagger">
+          <!-- 01 — SIGNATURE -->
+          <figure class="group relative reveal">
+            <div class="relative overflow-hidden border border-on-background/10 bg-surface-container aspect-[4/5] md:aspect-[4/5.3] lg:aspect-[4/5.1]">
+              <img class="w-full h-full object-cover object-center transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" alt="Signature coffee — editorial photography 01" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEkjcXtycjJrM8jO4ZkS0rTOV0aHQLXv7dDt3JaqarYW4Y8gPV_Lkowj6ELxLPN-zjVvAnM14tbCtr6GeW2OhhjK8I_maFjrnwX3FOpJlv3a8zmedlNmkG17HsHebMx6eDXoOBbiRRYsa8vuDrLNpF96jHVYxMqAFQkuyGp8JDbJIRbLMb7H73q8une86hsfciu6vRTiWQoEuCeWDhRDi-3xuFWoGvkb-xHIFYwa5k7U1i3PggFRz0"/>
+              <div class="absolute inset-0 bg-on-background/0 group-hover:bg-on-background/[0.06] transition-colors duration-500"></div>
+              <!-- subtle top hairline accent -->
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500"></div>
+            </div>
+            <figcaption class="flex items-center gap-2 pt-3">
+              <span class="w-4 h-px bg-primary"></span>
+              <span class="font-label-caps text-[10px] tracking-[0.14em] opacity-60">01 — SIGNATURE</span>
+            </figcaption>
+          </figure>
 
+          <!-- 02 — POUR OVER -->
+          <figure class="group relative reveal" style="transition-delay: 80ms">
+            <div class="relative overflow-hidden border border-on-background/10 bg-surface-container aspect-[4/5] md:aspect-[4/5.05] lg:aspect-[4/4.95]">
+              <img class="w-full h-full object-cover object-center transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" alt="Pour over coffee — editorial photography 02" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv11YYMaRCC_I9QsclJlnHCtEhIMywyd19yIV6JkoLZR2Sx0BUywyBOI-pcS9r4ubpKOhXBcQS9U9FiXRZDL_bOwiS2xLFFfzcXjqIwlMFqN7JaHCAFU3heYOgLlFZ0u2gy3g7COB_HO8YSWXD026MFgPjLefhF8hUroOe4T8FD2xb6ltwqcAP_VMGY3lue2hyySPqHRUUazUyldoAEX_o2-QGCEheFfRY87keYUawTSh4NhWr_FVr"/>
+              <div class="absolute inset-0 bg-on-background/0 group-hover:bg-on-background/[0.06] transition-colors duration-500"></div>
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500"></div>
+            </div>
+            <figcaption class="flex items-center gap-2 pt-3">
+              <span class="w-4 h-px bg-primary"></span>
+              <span class="font-label-caps text-[10px] tracking-[0.14em] opacity-60">02 — POUR OVER</span>
+            </figcaption>
+          </figure>
 
-    <!-- Gallery anchor â€” Explore scrolls here (offset for fixed header) -->
-    <div id="gallery" class="scroll-mt-24" aria-hidden="true"></div>
-    <!-- GALLERY masonry (Mobile) -->
-    <section class="px-margin-mobile mb-section-gap w-full flex flex-col gap-4 md:hidden scroll-mt-24">
-      <div class="w-full aspect-[4/5] bg-cover bg-center border border-surface-container-highest gallery-item"
-        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDItADiMozHqrHmgMcVxkX0DZNvb4vi3w9chif1ntPfXT1lK608X9R8jhmYRcii72LBpFYT3idqK1BDi16eOdwYow4p_82PyFXfc7eZKLbtk-Jsvwf3fmkeA1PBlmI0U_csGxeGqNyF9CvtWWDqiGrym3Lm-B_9h5Tv9KKIp9F_aWRSi_7h-HkMSDKt97juUSsmAWJF1ZLKimlQYNyfeoKB5e9KEKRggL2fxVoQYrGVgPqrPu0dfkvm')"></div>
-      <div class="flex gap-4 w-full aspect-[2/1]">
-        <div class="flex-1 bg-cover bg-center border border-surface-container-highest gallery-item"
-          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv11YYMaRCC_I9QsclJlnHCtEhIMywyd19yIV6JkoLZR2Sx0BUywyBOI-pcS9r4ubpKOhXBcQS9U9FiXRZDL_bOwiS2xLFFfzcXjqIwlMFqN7JaHCAFU3heYOgLlFZ0u2gy3g7COB_HO8YSWXD026MFgPjLefhF8hUroOe4T8FD2xb6ltwqcAP_VMGY3lue2hyySPqHRUUazUyldoAEX_o2-QGCEheFfRY87keYUawTSh4NhWr_FVr')"></div>
-        <div class="flex-1 bg-primary border border-primary flex items-center justify-center overflow-hidden gallery-item"
-          <span class="font-display-xl text-display-xl text-background opacity-20">/</span>
+          <!-- 03 — COLD -->
+          <figure class="group relative reveal" style="transition-delay: 140ms">
+            <div class="relative overflow-hidden border border-on-background/10 bg-surface-container aspect-[4/5.15] md:aspect-[4/5.35] lg:aspect-[4/5.2]">
+              <img class="w-full h-full object-cover object-center transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" alt="Cold coffee — editorial photography 03" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAIahfNXv_tEyJDN-oRs-S6AywChXRNA3i_ckJTaBrcmbT-7PRzi-zgIBAqYzf9N7_e_n-YgCsOx8iZGLy67ZJATFQYMslQmMYfpfIuFmWPK-qLpKjbQCaDfCoKN2231K2jqdoJIlpoJP-BiAs-fL7G05PyFZiPXmdPHEVflTtk2Tl_X06g2_QeLmxqcEl0JtZO3sQi4tyDpLtDbrbUaGE_IDXLKZcAsKEiHlCsyjou7kEd1mn6AH"/>
+              <div class="absolute inset-0 bg-on-background/0 group-hover:bg-on-background/[0.06] transition-colors duration-500"></div>
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500"></div>
+            </div>
+            <figcaption class="flex items-center gap-2 pt-3">
+              <span class="w-4 h-px bg-primary"></span>
+              <span class="font-label-caps text-[10px] tracking-[0.14em] opacity-60">03 — COLD</span>
+            </figcaption>
+          </figure>
+
+          <!-- 04 — SPECIAL -->
+          <figure class="group relative reveal" style="transition-delay: 200ms">
+            <div class="relative overflow-hidden border border-on-background/10 bg-surface-container aspect-[4/5] md:aspect-[4/5.1] lg:aspect-[4/4.9]">
+              <img class="w-full h-full object-cover object-center transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" alt="Special coffee — editorial photography 04" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6nrrxF7_vNmtS6tvjm92CQctJuO4Skmha8clkezPsETDIibBtrkRwz9JBScF2Xcsor2k7CY4goO_i0u8djqzWkqj65frIdnddE800XhjeuLIUsYkuiEtZ9rIoIipxCYvjd-pi_VrfP13a1e2vQAIjBoCRwOOdCQdhJHwRkmtqwYAihUvuSIniL6E125P2YrIe1Jil-ftwsahN00Vse6I3NynVB6LkkRWaD0LtYByzIHb7Ux3381-"/>
+              <div class="absolute inset-0 bg-on-background/0 group-hover:bg-on-background/[0.06] transition-colors duration-500"></div>
+              <div class="absolute top-0 left-0 w-full h-[1px] bg-primary/0 group-hover:bg-primary/20 transition-colors duration-500"></div>
+            </div>
+            <figcaption class="flex items-center gap-2 pt-3">
+              <span class="w-4 h-px bg-primary"></span>
+              <span class="font-label-caps text-[10px] tracking-[0.14em] opacity-60">04 — SPECIAL</span>
+            </figcaption>
+          </figure>
         </div>
-      </div>
-      <div class="w-full aspect-square bg-cover bg-center border border-surface-container-highest gallery-item"
-        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA8-vUUp2RGzssMy5t8r_TXytRkFf80ltlM-ze5TCuMRulA6wnYHxn25MZINAfNQe4Hefq0RHjrLnjeoG1POn2LRjZCD4VuTP84XkD9kH9mFE1osq828AYywzcnZ1DYBJpf0tQeIsWsX7Cq_p5h7-_vsHBBNbceK1lKBYlcq8i_kUU6DWogxUUowqm692GBQM18MG7nUhDuOhpXAClOUFChXlMMG3YRF8khhKE2MK7XxbOwkmglqwES')"></div>
-    </section>
 
-    <!-- GALLERY asymmetric (Desktop) -->
-    <section class="hidden md:block px-container-padding max-w-[1600px] mx-auto mb-section-gap scroll-mt-24">
-      <div class="grid grid-cols-12 gap-gutter">
-        <div class="col-span-12 md:col-span-8 h-[600px] bg-surface-container border border-on-background/10 relative overflow-hidden gallery-item">
-          <img class="w-full h-full object-cover gallery-img" alt="Wide architectural shot of the minimalist FIVE SLASH cafe interior."
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEhmgfcXOZncxXxmnkoJmqVQNOwxgaQaBHr_976mqmopgAcFAEAJgTzIQHRD5zbZ3yUxbMKH8oAzUU-9rdqKozNR-LPvuPNtw2rBBsyctZEDrvwqwrx_RjIYsArn9fWWHDOU29zus2hyA1hPqcojk07lR68BFGMVfmkNQH0l1Dplf68XB75W6Ds08a1akSDUmQxI0PI5pRbCHd6MtrQgIniYiTk95INDMvTgFgjkkii3y4nYguRF6"/>
-          <div class="absolute bottom-6 left-6 bg-background px-4 py-2 font-mono-label text-mono-label border border-on-background">SPACE / 01</div>
-        </div>
-        <div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
-          <div class="flex-1 bg-surface-container border border-on-background/10 relative overflow-hidden min-h-[280px] gallery-item">
-            <img class="w-full h-full object-cover filter grayscale gallery-img" alt="Barista hands pouring water from a matte black gooseneck kettle into a pour-over dripper."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRWNPFwMDaVJFAgLL64ZH3KKFWsUCCgYx0o-JM9If9pdkhxIBwee4qL3dRkhYjubHL8J35xABiKf2iOgyLA2BtmNJ76LhSYe_qxK4z_sOeRlvejpPmA2sIovRJ8nhCC--Nfbh_tHU4BOMinyEieizAnHv76NQkCmizRsqlakM_aAw2Ke3H2nSQrqc2xdCOamuIU1wXBQP8cmmDs9q5jRnbeWIQjSOinMBTzYKf7ImyGlrY1PCWTQr"/>
-          </div>
-          <div class="flex-1 bg-primary text-background p-8 flex flex-col justify-end gallery-item">
-            <span class="font-display-lg text-[64px] leading-none tracking-tighter">/ / /</span>
-            <p class="font-mono-label text-mono-label mt-4 opacity-80 uppercase">Precision in every drop.</p>
-          </div>
+        <!-- CTA -->
+        <div class="flex justify-center md:justify-start mt-10 md:mt-12 reveal" style="transition-delay: 260ms">
+          <a href="menu.html" class="inline-flex items-center gap-2 border border-on-background px-8 py-4 font-label-caps text-[12px] tracking-[0.14em] hover:bg-on-background hover:text-background transition-colors btn-interactive link-arrow">
+            VIEW FULL MENU <span class="material-symbols-outlined text-[16px] arrow-icon">arrow_forward</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA (Mobile) -->
-    <section class="px-margin-mobile mb-section-gap w-full flex flex-col items-center justify-center text-center gap-8 bg-inverse-surface py-20 md:hidden reveal">
-      <h2 class="font-display-lg text-headline-lg-mobile text-background uppercase w-full">YOUR DAILY SLASH</h2>
-      <img alt="Logo Reference" class="w-24 h-24 object-contain opacity-50 mb-4 mix-blend-screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Tk7l3qhUWQUNqyG23KXpueylRwnKJ1upR2Zbt-SZEfxGww9gH_2SK8eMRTj0uFVjJb5hCbJblBDPl8KIIoRXRX_Gda3fu31InhZHA_3W0REKnccfBz-6PBRI_OduBlcDNyIoX29lGmFO2wsjKniPijrjvtTN7vytfeGbn6r6zAr5tLGphjMzRn5cpouytNdzcftaF2wJZJtDPdrsQSMybQZ1NUU_PKkFaVJDIOJOcOuNpjZupnviAcCNxJZ8cmyNQQ"/>
-      <div class="flex flex-col gap-4 w-full max-w-sm">
-        <a href="menu.html" class="block w-full bg-primary text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-on-background transition-colors duration-300 text-center uppercase btn-interactive">View Menu</a>
-        <a href="#locations" class="anchor-link block w-full border border-background text-background font-mono-label text-mono-label py-4 px-6 rounded hover:bg-background hover:text-on-background transition-colors duration-300 text-center uppercase btn-interactive">Find us</a>
+    <!-- ================= GALLERY — CURATED CENTERPIECE ================= -->
+    <div id="gallery" class="scroll-mt-[64px]" aria-hidden="true"></div>
+    <section class="relative bg-background py-12 md:py-20 lg:py-28 overflow-hidden border-b border-on-background/10">
+      <div class="max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px]">
+        <div class="flex flex-wrap items-end justify-between gap-4 md:gap-6 mb-6 md:mb-10 reveal">
+          <div>
+            <span class="font-label-caps text-[11px] tracking-[0.18em] flex items-center gap-2 opacity-60"><span class="w-6 h-px bg-primary"></span> ATELIER — GALLERY / EDIT 01</span>
+            <h2 class="font-display-xl font-[800] tracking-[-0.04em] leading-none uppercase text-[36px] md:text-[54px] lg:text-[62px] mt-2">SPACE<span class="text-primary">/</span> CRAFT</h2>
+          </div>
+          <p class="hidden md:block font-body-md text-[15px] leading-[1.5] text-secondary max-w-[36ch]">Not a template. A curation. Crops, scale and negative space do the storytelling — the slash holds the grid together.</p>
+        </div>
+
+        <!-- Desktop asymmetric -->
+        <div class="hidden md:grid grid-cols-12 gap-5 lg:gap-6 auto-rows-[280px] stagger">
+          <div class="col-span-8 row-span-2 relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Wide architectural shot of FIVE SLASH interior — minimal, tonal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEhmgfcXOZncxXxmnkoJmqVQNOwxgaQaBHr_976mqmopgAcFAEAJgTzIQHRD5zbZ3yUxbMKH8oAzUU-9rdqKozNR-LPvuPNtw2rBBsyctZEDrvwqwrx_RjIYsArn9fWWHDOU29zus2hyA1hPqcojk07lR68BFGMVfmkNQH0l1Dplf68XB75W6Ds08a1akSDUmQxI0PI5pRbCHd6MtrQgIniYiTk95INDMvTgFgjkkii3y4nYguRF6"/>
+            <div class="absolute bottom-4 left-4 bg-background border border-on-background px-3 py-1.5 font-mono-label text-[11px] tracking-[0.08em]">SPACE / 01 — ATELIER</div>
+            <div class="absolute top-4 right-4 w-10 h-10 bg-primary/90 text-background flex items-center justify-center font-display-xl text-[20px] skew-x-[-8deg]">/</div>
+          </div>
+          <div class="col-span-4 relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Barista hands pouring with gooseneck — grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRWNPFwMDaVJFAgLL64ZH3KKFWsUCCgYx0o-JM9If9pdkhxIBwee4qL3dRkhYjubHL8J35xABiKf2iOgyLA2BtmNJ76LhSYe_qxK4z_sOeRlvejpPmA2sIovRJ8nhCC--Nfbh_tHU4BOMinyEieizAnHv76NQkCmizRsqlakM_aAw2Ke3H2nSQrqc2xdCOamuIU1wXBQP8cmmDs9q5jRnbeWIQjSOinMBTzYKf7ImyGlrY1PCWTQr"/>
+            <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(112deg, transparent 70%, rgba(173,44,0,0.08) 70.6%, transparent 71.2%);"></div>
+          </div>
+          <div class="col-span-4 bg-primary text-background p-6 lg:p-8 flex flex-col justify-between gallery-item">
+            <span class="font-label-caps text-[10px] tracking-[0.18em] opacity-70">DETAIL — 5/</span>
+            <div>
+              <span class="font-display-xl text-[56px] lg:text-[64px] leading-none tracking-tighter block">/ / /</span>
+              <p class="font-mono-label text-[11px] tracking-[0.08em] uppercase opacity-80 mt-3">Precision in every drop.<br/>The slash is the cut.</p>
+            </div>
+            <span class="font-mono-label text-[11px] opacity-60">EL MANSOURA — 29J4+FFJ</span>
+          </div>
+          <div class="col-span-7 relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Detail of latte texture and craft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8-vUUp2RGzssMy5t8r_TXytRkFf80ltlM-ze5TCuMRulA6wnYHxn25MZINAfNQe4Hefq0RHjrLnjeoG1POn2LRjZCD4VuTP84XkD9kH9mFE1osq828AYywzcnZ1DYBJpf0tQeIsWsX7Cq_p5h7-_vsHBBNbceK1lKBYlcq8i_kUU6DWogxUUowqm692GBQM18MG7nUhDuOhpXAClOUFChXlMMG3YRF8khhKE2MK7XxbOwkmglqwES"/>
+            <div class="absolute top-4 left-4 bg-background/90 backdrop-blur-sm border border-on-background/10 px-3 py-1 font-label-caps text-[11px]">CRAFT / 03</div>
+          </div>
+          <div class="col-span-5 relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Minimal cafe detail — ceramics and light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcSx67rkBxIFYgkIy4azbL78BLUnpmNz1KN7OEqcFQ8ubX34F9CCwGhB_ZGc0wE2kyvVUNhY7k7yOnXtYEiUeZbH7w_zZyB41qg4xpXRWYDHAnmQLlDRbvl9pYQoJ2CrKsZGTUv31zIEX_ykwut7IBbi9FbFh0uW_GiGX3eVPp8Ijv1ZUQ3wTGnMIqgQs1uTsPj1ooUGMVwKHccFtB8Db9nQVk2hSKaPcFmJ3YMmD3ezn7FQWATFAx"/>
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-primary/20"></div>
+          </div>
+        </div>
+
+        <!-- Mobile curated — no equal grid -->
+        <div class="md:hidden grid grid-cols-12 gap-3 stagger">
+          <div class="col-span-12 aspect-[4/5] relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="FIVE SLASH interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUEhmgfcXOZncxXxmnkoJmqVQNOwxgaQaBHr_976mqmopgAcFAEAJgTzIQHRD5zbZ3yUxbMKH8oAzUU-9rdqKozNR-LPvuPNtw2rBBsyctZEDrvwqwrx_RjIYsArn9fWWHDOU29zus2hyA1hPqcojk07lR68BFGMVfmkNQH0l1Dplf68XB75W6Ds08a1akSDUmQxI0PI5pRbCHd6MtrQgIniYiTk95INDMvTgFgjkkii3y4nYguRF6"/>
+            <span class="absolute bottom-3 left-3 bg-background border border-on-background px-2.5 py-1 font-mono-label text-[11px]">SPACE / 01</span>
+          </div>
+          <div class="col-span-7 aspect-[3/4] relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Pour over detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv11YYMaRCC_I9QsclJlnHCtEhIMywyd19yIV6JkoLZR2Sx0BUywyBOI-pcS9r4ubpKOhXBcQS9U9FiXRZDL_bOwiS2xLFFfzcXjqIwlMFqN7JaHCAFU3heYOgLlFZ0u2gy3g7COB_HO8YSWXD026MFgPjLefhF8hUroOe4T8FD2xb6ltwqcAP_VMGY3lue2hyySPqHRUUazUyldoAEX_o2-QGCEheFfRY87keYUawTSh4NhWr_FVr"/>
+          </div>
+          <div class="col-span-5 flex flex-col gap-3">
+            <div class="flex-1 bg-primary flex flex-col items-center justify-center p-4 gallery-item">
+              <span class="font-display-xl text-[42px] leading-none text-background slash-skew">/</span>
+              <span class="font-mono-label text-[10px] tracking-[0.08em] text-background/80 mt-2 text-center uppercase">Precision<br/>in every<br/>drop</span>
+            </div>
+            <div class="aspect-square relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+              <img class="w-full h-full object-cover gallery-img" alt="Coffee detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8-vUUp2RGzssMy5t8r_TXytRkFf80ltlM-ze5TCuMRulA6wnYHxn25MZINAfNQe4Hefq0RHjrLnjeoG1POn2LRjZCD4VuTP84XkD9kH9mFE1osq828AYywzcnZ1DYBJpf0tQeIsWsX7Cq_p5h7-_vsHBBNbceK1lKBYlcq8i_kUU6DWogxUUowqm692GBQM18MG7nUhDuOhpXAClOUFChXlMMG3YRF8khhKE2MK7XxbOwkmglqwES"/>
+            </div>
+          </div>
+          <div class="col-span-12 aspect-[16/9] relative overflow-hidden border border-on-background/10 bg-surface-container gallery-item">
+            <img class="w-full h-full object-cover gallery-img" alt="Barista craft" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRWNPFwMDaVJFAgLL64ZH3KKFWsUCCgYx0o-JM9If9pdkhxIBwee4qL3dRkhYjubHL8J35xABiKf2iOgyLA2BtmNJ76LhSYe_qxK4z_sOeRlvejpPmA2sIovRJ8nhCC--Nfbh_tHU4BOMinyEieizAnHv76NQkCmizRsqlakM_aAw2Ke3H2nSQrqc2xdCOamuIU1wXBQP8cmmDs9q5jRnbeWIQjSOinMBTzYKf7ImyGlrY1PCWTQr"/>
+            <span class="absolute top-3 left-3 bg-background/90 backdrop-blur-sm border border-on-background/10 px-2.5 py-1 font-label-caps text-[10px]">CRAFT — 5/</span>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-8 md:mt-10 reveal">
+          <span class="font-mono-label text-[11px] tracking-[0.08em] opacity-40 flex items-center gap-2"><span class="w-6 h-px bg-on-background/20"></span> CURATED — NOT GENERATED <span class="w-6 h-px bg-on-background/20"></span></span>
+        </div>
       </div>
     </section>
 
-    <!-- FINAL CTA (Desktop) -->
-    <section class="hidden md:flex min-h-[50vh] flex-col justify-center items-center px-container-padding text-center border-t border-on-background/10 mb-section-gap reveal">
-      <h2 class="font-display-xl text-[64px] lg:text-[88px] xl:text-display-xl leading-none tracking-tighter uppercase mb-8">Ready to Drink?</h2>
-      <a href="menu.html" class="inline-block bg-on-background text-background px-12 py-5 font-label-caps text-label-caps tracking-widest hover:bg-primary transition-colors duration-300 btn-interactive">VISIT Five/Cafe</a>
-      <div class="mt-16 flex gap-8 font-mono-label text-mono-label text-secondary uppercase">
-        <a class="hover:text-primary transition-colors" href="#">Instagram</a>
-        <a class="hover:text-primary transition-colors" href="#">Twitter</a>
-        <a class="hover:text-primary transition-colors" href="#">Journal</a>
+    <!-- ================= FINAL CTA — EDITORIAL CLOSER ================= -->
+    <section class="relative bg-inverse-surface text-background overflow-hidden">
+      <div class="absolute inset-0 opacity-[0.035] pointer-events-none" aria-hidden="true">
+        <span class="absolute -bottom-[8%] -right-[4%] font-display-xl font-[800] leading-none tracking-[-0.06em] text-[68vw] md:text-[42vw]"><span class="text-background">5</span><span class="text-primary-fixed skew-x-[-10deg] inline-block">/</span></span>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-[2px] bg-primary"></div>
+      <div class="relative max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px] py-12 md:py-20">
+        <div class="grid grid-cols-12 gap-6 md:gap-8 items-center">
+          <div class="col-span-12 lg:col-span-7">
+            <span class="font-label-caps text-[11px] tracking-[0.18em] text-primary-fixed flex items-center gap-2 reveal"><span class="w-6 h-px bg-primary-fixed"></span> YOUR DAILY RITUAL</span>
+            <h2 class="font-display-xl font-[800] tracking-[-0.04em] leading-[0.85] uppercase text-[42px] md:text-[64px] lg:text-[72px] mt-3 reveal" style="transition-delay:60ms">
+              READY TO<br/>
+              DRINK<span class="text-primary-fixed">?</span>
+            </h2>
+            <p class="font-body-md text-[16px] leading-[1.6] opacity-70 max-w-[42ch] mt-4 hidden md:block reveal" style="transition-delay:110ms">One café. One address. No clones. No noise. Just precision — poured daily in El Mansoura.</p>
+          </div>
+          <div class="col-span-12 lg:col-span-5 flex flex-col gap-4 lg:items-end reveal" style="transition-delay:140ms">
+            <p class="font-body-md text-[14px] leading-[1.6] opacity-60 md:hidden">One café. One address. No clones. Just precision.</p>
+            <div class="flex flex-wrap gap-3 lg:justify-end w-full lg:w-auto">
+              <a href="menu.html" class="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 bg-primary text-background px-7 md:px-8 py-4 font-label-caps text-[12px] tracking-[0.12em] hover:bg-background hover:text-on-background transition-colors btn-interactive">
+                VISIT Five/Cafe — MENU <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+              <a href="#locations" class="anchor-link flex-1 lg:flex-none inline-flex items-center justify-center gap-2 border border-background/25 text-background px-7 md:px-8 py-[15px] font-label-caps text-[12px] tracking-[0.12em] hover:bg-background hover:text-on-background transition-colors btn-interactive">
+                FIND US
+              </a>
+            </div>
+            <div class="hidden md:flex items-center gap-3 font-mono-label text-[11px] tracking-[0.08em] opacity-40 lg:justify-end">
+              <span>29J4+FFJ — EL MANSOURA</span><span class="w-6 h-px bg-background/30"></span><span>OPEN · 2AM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-[1px] bg-background/10"></div>
+      <div class="flex gap-2 px-margin-mobile md:px-container-padding lg:pl-[96px] py-3 max-w-[1600px] mx-auto font-mono-label text-[10px] tracking-[0.1em] opacity-30">
+        <span>FIVE SLASH — ATELIER</span><span class="text-primary">/</span><span>EL MANSOURA — DAKAHLIA</span><span class="hidden md:inline">— EST 2024</span>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="w-full mt-section-gap border-t border-on-background bg-background flex flex-col items-center gap-gutter px-container-padding py-20 max-w-7xl mx-auto">
-    <div class="font-display-lg text-headline-lg text-on-background mb-8">FIVE SLASH</div>
-    <nav class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-8 mb-8">
-      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase md:normal-case md:underline btn-interactive" href="#">Privacy Policy</a>
-      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase md:normal-case md:underline btn-interactive" href="#">Terms of Service</a>
-      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase md:normal-case md:underline btn-interactive" href="#">Wholesale</a>
-      <a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-all duration-200 uppercase md:normal-case md:underline btn-interactive" href="#">Careers</a>
-    </nav>
-    <div class="font-label-caps md:font-mono-label text-label-caps md:text-mono-label text-secondary text-center uppercase md:normal-case">
-      آ© 2024 FIVE SLASH. ALL RIGHTS RESERVED.
+  <!-- Footer — minimal, editorial -->
+  <footer class="w-full bg-background border-t border-on-background/10">
+    <div class="max-w-[1600px] mx-auto px-margin-mobile md:px-container-padding lg:pl-[96px] py-10 md:py-14 flex flex-col gap-8">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div>
+          <div class="font-display-lg font-[800] tracking-[-0.04em] text-[22px] leading-none flex items-baseline gap-[1px]">FIVE<span class="text-primary">/</span><span class="opacity-40 ml-1 text-[12px] tracking-[0.12em] hidden md:inline">SLASH</span></div>
+          <p class="font-mono-label text-[11px] leading-[1.5] opacity-50 mt-3 max-w-[32ch]">Premium coffee house — El Mansoura.<br/>Built around the slash. Poured with precision.</p>
+        </div>
+        <nav class="flex flex-wrap gap-4 md:gap-6 items-start">
+          <a class="font-label-caps text-[11px] tracking-[0.1em] opacity-60 hover:opacity-100 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="font-label-caps text-[11px] tracking-[0.1em] opacity-60 hover:opacity-100 hover:text-primary transition-colors" href="#">Terms of Service</a>
+          <a class="font-label-caps text-[11px] tracking-[0.1em] opacity-60 hover:opacity-100 hover:text-primary transition-colors" href="#">Wholesale</a>
+          <a class="font-label-caps text-[11px] tracking-[0.1em] opacity-60 hover:opacity-100 hover:text-primary transition-colors" href="#">Careers</a>
+        </nav>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between gap-3 pt-6 border-t border-on-background/10 font-mono-label text-[11px] tracking-[0.06em] opacity-40">
+        <span>© 2024 FIVE SLASH. ALL RIGHTS RESERVED.</span>
+        <span class="flex items-center gap-2">BUILT<span class="text-primary">/</span>POURED — EL MANSOURA <span class="hidden md:inline">— 29J4+FFJ</span></span>
+      </div>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-
-
